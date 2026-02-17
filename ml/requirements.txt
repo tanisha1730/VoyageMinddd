@@ -1,0 +1,9 @@
+# Real-time ML service — no database used.
+fastapi
+uvicorn
+scikit-learn
+numpy
+pandas
+requests
+pydantic
+python-multipart

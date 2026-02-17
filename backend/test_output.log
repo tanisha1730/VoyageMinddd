@@ -1,0 +1,53 @@
+🚀 Testing Full Itinerary Gen for Ahmedabad...
+Getting places for Ahmedabad with interests: nature
+🌍 REAL-TIME: Getting LOTS of places for Ahmedabad with interests: [
+  "nature"
+]
+🆓 FREE APIS: Fetching from OpenTripMap + Overpass (NO KEY NEEDED)...
+✅ FREE APIS: Got 99 places from FREE APIs!
+🌐 WIKIDATA: Fetching from Wikidata/Wikipedia API...
+🗺️ OSM: Fetching from OpenStreetMap Nominatim API...
+🧹 FILTERED: Removed 4 junk places (memorials/monuments), 95 quality places remaining
+✅ FINAL: Returning 95 UNIQUE places (from 95 total)
+
+📊 SUMMARY: Found 95 places.
+Categorizing places...
+Categories: {
+  "attractions": 27,
+  "nature": 14,
+  "shopping": 1,
+  "viewpoints": 0,
+  "restaurants": 53
+}
+
+Attempting to build itinerary...
+
+✅ Itinerary built! Days: 3
+Day 1: 8 places
+  - arrival: Arrive in Ahmedabad
+  - breakfast: Havmor Restaurant
+  - morning: Bird Feeder
+  - lunch: Swati Snacks
+  - afternoon: NSIC
+  - late_afternoon: The Mill Owner's Building of Le Corbusier
+  - evening: Lokmanya Tilak Garden (Victoria Garden)
+  - dinner: Nishat
+Day 2: 8 places
+  - breakfast: The House of Khaman
+  - morning: Law Garden
+  - lunch: purohit
+  - afternoon: Prathana Bhoomi - Prayers ground
+  - late_afternoon: Reliance mart
+  - travel: 🚇 Metro to manegbaug
+  - evening: manegbaug
+  - dinner: havmor
+Day 3: 9 places
+  - breakfast: Barrista, Vijay 4 Roads
+  - travel: 🚇 Metro to Naginawadi
+  - morning: Naginawadi
+  - lunch: Udipi Cafe
+  - afternoon: Mahagujarat Shahid Smarak
+  - late_afternoon: Sanskar Kendra - City Museum
+  - evening: Rasala Nature Park
+  - dinner: Dinner Bell
+  - departure: Departure

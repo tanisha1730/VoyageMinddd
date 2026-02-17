@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: ai-travel-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ai-travel-planner
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - ai-travel-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: ai-travel-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - ai-travel-network
+
+  ml-service:
+    build:
+      context: ./ml
+      dockerfile: Dockerfile
+    container_name: ai-travel-ml
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    environment:
+      - ML_SERVICE_SECRET=${ML_SERVICE_SECRET}
+    volumes:
+      - ./ml/models:/app/models
+    networks:
+      - ai-travel-network
+    depends_on:
+      - redis
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ai-travel-backend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb://mongodb:27017/ai-travel-planner
+      - REDIS_URL=redis://redis:6379
+      - ML_SERVICE_URL=http://ml-service:8001
+      - GOOGLE_MAPS_API_KEY=${GOOGLE_MAPS_API_KEY}
+      - OPENWEATHER_KEY=${OPENWEATHER_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - ML_SERVICE_SECRET=${ML_SERVICE_SECRET}
+    volumes:
+      - ./backend/uploads:/app/uploads
+    networks:
+      - ai-travel-network
+    depends_on:
+      - mongodb
+      - redis
+      - ml-service
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai-travel-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_BASE_URL=http://localhost:3001
+      - REACT_APP_GOOGLE_MAPS_KEY=${REACT_APP_GOOGLE_MAPS_KEY}
+    networks:
+      - ai-travel-network
+    depends_on:
+      - backend
+
+  nginx:
+    image: nginx:alpine
+    container_name: ai-travel-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - ai-travel-network
+    depends_on:
+      - frontend
+      - backend
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  ai-travel-network:
+    driver: bridge
