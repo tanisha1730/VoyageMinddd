@@ -9,6 +9,8 @@ import toast from 'react-hot-toast'
 import localStorageService from '../services/localStorageService'
 
 import MapComponent from '../components/MapComponent'
+import PageTransition from '../components/PageTransition'
+import AnimatedSection from '../components/AnimatedSection'
 
 const PlannerWorkspace = () =>
 {
@@ -30,6 +32,7 @@ const PlannerWorkspace = () =>
   const [ generating, setGenerating ] = useState( false )
   const [ daysError, setDaysError ] = useState( '' )
   const [ mobileMenuOpen, setMobileMenuOpen ] = useState( false )
+  const [ isEditing, setIsEditing ] = useState( false )
 
   // Load saved state from localStorage on mount
   useEffect( () =>
@@ -135,10 +138,48 @@ const PlannerWorkspace = () =>
     }
   }
 
+  // --- Edit Mode Handlers ---
+  const handleUpdatePlace = ( dayIndex, placeIndex, field, value ) =>
+  {
+    const newItinerary = { ...itinerary }
+    newItinerary.plan[ dayIndex ].places[ placeIndex ][ field ] = value
+    setItinerary( newItinerary )
+  }
+
+  const handleDeletePlace = ( dayIndex, placeIndex ) =>
+  {
+    const newItinerary = { ...itinerary }
+    newItinerary.plan[ dayIndex ].places.splice( placeIndex, 1 )
+    setItinerary( newItinerary )
+  }
+
+  const handleAddPlace = ( dayIndex ) =>
+  {
+    const newItinerary = { ...itinerary }
+    if ( !newItinerary.plan[ dayIndex ].places ) newItinerary.plan[ dayIndex ].places = []
+
+    newItinerary.plan[ dayIndex ].places.push( {
+      name: 'New Activity',
+      activity_type: 'activity',
+      start_time: '12:00',
+      end_time: '13:00',
+      entry_fee: 0,
+      description: 'Custom activity'
+    } )
+    setItinerary( newItinerary )
+  }
+
+  const handleSaveItem = ( dayIndex, placeIndex ) =>
+  {
+    // In a real app, you might save to backend here.
+    // For now, we just show feedback since state is already updated locally.
+    toast.success( 'Item updated', { duration: 1000 } )
+  }
+
   const tripTypes = [ 'City hops', 'Road trips', 'Solo resets', 'Family holidays' ]
 
   return (
-    <>
+    <PageTransition>
       { generating && <TravelLoadingAnimation message="Creating your perfect itinerary..." /> }
 
       <div className="min-h-screen bg-gray-50">
@@ -248,7 +289,7 @@ const PlannerWorkspace = () =>
           <div className="mx-auto max-w-7xl px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Left Content */ }
-              <div>
+              <AnimatedSection>
                 <div className="inline-block px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-medium mb-6">
                   Step 1 - Describe your trip
                 </div>
@@ -268,10 +309,10 @@ const PlannerWorkspace = () =>
                     </button>
                   ) ) }
                 </div>
-              </div>
+              </AnimatedSection>
 
               {/* Right Content - AI Ready */ }
-              <div className="bg-white rounded-xl shadow-sm p-5 border border-gray-200 max-w-2xl">
+              <AnimatedSection delay={ 0.2 } className="bg-white rounded-xl shadow-sm p-5 border border-gray-200 max-w-2xl">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-lg font-bold text-gray-900">Planner</h3>
                   <div className="flex items-center space-x-2 text-xs text-teal-600">
@@ -282,7 +323,7 @@ const PlannerWorkspace = () =>
                 <p className="text-sm text-gray-600">
                   Tip: Write in your own words — "5 lazy days between Lisbon and Porto with views, wine bars, and easy walks."
                 </p>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -298,7 +339,7 @@ const PlannerWorkspace = () =>
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               {/* Left Column - Trip Setup (2 cols) */ }
-              <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm p-8 border border-gray-200">
+              <AnimatedSection className="lg:col-span-2 bg-white rounded-2xl shadow-sm p-8 border border-gray-200">
                 <div className="flex items-center space-x-2 mb-6">
                   <Sparkles className="w-5 h-5 text-teal-600" />
                   <h3 className="text-xl font-bold text-gray-900">Trip setup</h3>
@@ -407,10 +448,10 @@ const PlannerWorkspace = () =>
                     ) }
                   </button>
                 </div>
-              </div>
+              </AnimatedSection>
 
               {/* Right Column - AI Itinerary Preview */ }
-              <div className="lg:col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col h-[800px] overflow-hidden">
+              <AnimatedSection delay={ 0.2 } className="lg:col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col h-[800px] overflow-hidden">
                 {/* Header */ }
                 <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 bg-white">
                   <div className="flex items-center space-x-2">
@@ -418,8 +459,8 @@ const PlannerWorkspace = () =>
                     <h3 className="text-lg font-bold text-gray-900">AI itinerary preview</h3>
                   </div>
 
-                  {/* View Toggle */ }
-                  <div className="flex bg-gray-100 p-1 rounded-lg">
+                  {/* View Toggle & Modify Button */ }
+                  <div className="flex bg-gray-100 p-1 rounded-lg space-x-1">
                     <button
                       onClick={ () => setActiveTab( 'itinerary' ) }
                       className={ `px-3 py-1.5 text-sm font-medium rounded-md transition-all ${ activeTab === 'itinerary' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700' }` }
@@ -432,6 +473,15 @@ const PlannerWorkspace = () =>
                     >
                       Map
                     </button>
+                    {/* Modify Button */ }
+                    { itinerary && (
+                      <button
+                        onClick={ () => setIsEditing( !isEditing ) }
+                        className={ `px-3 py-1.5 text-sm font-medium rounded-md transition-all ${ isEditing ? 'bg-teal-100 text-teal-700 shadow-sm' : 'text-gray-500 hover:text-gray-700' }` }
+                      >
+                        { isEditing ? 'Done' : 'Modify' }
+                      </button>
+                    ) }
                   </div>
                 </div>
 
@@ -482,35 +532,99 @@ const PlannerWorkspace = () =>
 
                                   return (
                                     <div key={ placeIndex } className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors border border-transparent hover:border-gray-200">
-                                      <h5 className="font-bold text-gray-900 text-lg mb-2">{ place.display_name || place.name }</h5>
-
-                                      <div className="flex items-start mb-4">
-                                        <span className="mr-2 mt-0.5 text-base">{ icon }</span>
-                                        <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                                          { place.description || `Experience ${ place.display_name || place.name }` }
-                                        </p>
-                                      </div>
-
-                                      <div className="flex items-center space-x-3 text-sm">
-                                        <div className="text-gray-500 font-medium">
-                                          { place.start_time } · { place.activity_type?.includes( 'transfer' ) || place.activity_type?.includes( 'travel' )
-                                            ? 'travel'
-                                            : place.activity_type?.replace( /_/g, ' ' ) || 'activity' }
+                                      { isEditing ? (
+                                        // EDIT MODE
+                                        <div className="space-y-3">
+                                          <div className="flex justify-between items-start">
+                                            <input
+                                              type="text"
+                                              value={ place.display_name || place.name }
+                                              onChange={ ( e ) => handleUpdatePlace( dayIndex, placeIndex, 'name', e.target.value ) }
+                                              className="w-full text-lg font-bold text-gray-900 bg-white border border-gray-300 rounded px-2 py-1 mb-2"
+                                            />
+                                            <button
+                                              onClick={ () => handleDeletePlace( dayIndex, placeIndex ) }
+                                              className="ml-2 text-red-500 hover:text-red-700"
+                                              title="Delete activity"
+                                            >
+                                              <X className="w-5 h-5" />
+                                            </button>
+                                          </div>
+                                          <textarea
+                                            value={ place.description || '' }
+                                            onChange={ ( e ) => handleUpdatePlace( dayIndex, placeIndex, 'description', e.target.value ) }
+                                            className="w-full text-sm text-gray-600 bg-white border border-gray-300 rounded px-2 py-1 h-20 resize-none"
+                                            placeholder="Description"
+                                          />
+                                          <div className="flex space-x-2">
+                                            <input
+                                              type="text"
+                                              value={ place.start_time }
+                                              onChange={ ( e ) => handleUpdatePlace( dayIndex, placeIndex, 'start_time', e.target.value ) }
+                                              className="w-24 text-sm bg-white border border-gray-300 rounded px-2 py-1"
+                                              placeholder="Start Time"
+                                            />
+                                            <input
+                                              type="number"
+                                              value={ place.entry_fee }
+                                              onChange={ ( e ) => handleUpdatePlace( dayIndex, placeIndex, 'entry_fee', parseFloat( e.target.value ) || 0 ) }
+                                              className="w-24 text-sm bg-white border border-gray-300 rounded px-2 py-1"
+                                              placeholder="Cost"
+                                            />
+                                            <button
+                                              onClick={ () => handleSaveItem( dayIndex, placeIndex ) }
+                                              className="p-1.5 bg-teal-100 text-teal-700 rounded hover:bg-teal-200"
+                                              title="Save item"
+                                            >
+                                              <Save className="w-4 h-4" />
+                                            </button>
+                                          </div>
                                         </div>
+                                      ) : (
+                                        // VIEW MODE (Original)
+                                        <>
+                                          <h5 className="font-bold text-gray-900 text-lg mb-2">{ place.display_name || place.name }</h5>
 
-                                        <span className={ `px-3 py-1 rounded-md text-xs font-bold ${ tagColor }` }>
-                                          { tagLabel }
-                                        </span>
+                                          <div className="flex items-start mb-4">
+                                            <span className="mr-2 mt-0.5 text-base">{ icon }</span>
+                                            <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                                              { place.description || `Experience ${ place.display_name || place.name }` }
+                                            </p>
+                                          </div>
 
-                                        { place.entry_fee !== undefined && (
-                                          <span className="text-gray-500 font-semibold pl-1">
-                                            ${ place.entry_fee === 0 ? 'Free' : place.entry_fee }
-                                          </span>
-                                        ) }
-                                      </div>
+                                          <div className="flex items-center space-x-3 text-sm">
+                                            <div className="text-gray-500 font-medium">
+                                              { place.start_time } · { place.activity_type?.includes( 'transfer' ) || place.activity_type?.includes( 'travel' )
+                                                ? 'travel'
+                                                : place.activity_type?.replace( /_/g, ' ' ) || 'activity' }
+                                            </div>
+
+                                            <span className={ `px-3 py-1 rounded-md text-xs font-bold ${ tagColor }` }>
+                                              { tagLabel }
+                                            </span>
+
+                                            { place.entry_fee !== undefined && (
+                                              <span className="text-gray-500 font-semibold pl-1">
+                                                ${ place.entry_fee === 0 ? 'Free' : place.entry_fee }
+                                              </span>
+                                            ) }
+                                          </div>
+                                        </>
+                                      ) }
                                     </div>
                                   );
                                 } ) }
+
+                                {/* Add Activity Button (Edit Mode Only) */ }
+                                { isEditing && (
+                                  <button
+                                    onClick={ () => handleAddPlace( dayIndex ) }
+                                    className="w-full py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-teal-500 hover:text-teal-600 transition-colors font-medium flex items-center justify-center space-x-2"
+                                  >
+                                    <Sparkles className="w-4 h-4" />
+                                    <span>Add Activity</span>
+                                  </button>
+                                ) }
                               </div>
 
                               {/* Day Cost Footer */ }
@@ -576,7 +690,7 @@ const PlannerWorkspace = () =>
                                 Save
                               </button>
                               <button
-                                onClick={ () => navigate( `/itinerary/${ itinerary._id }` ) }
+                                onClick={ () => navigate( `/itinerary/${ itinerary._id }`, { state: { itinerary: itinerary } } ) }
                                 className="flex-1 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium text-sm"
                               >
                                 Full View
@@ -626,7 +740,7 @@ const PlannerWorkspace = () =>
                     </li>
                   </ul>
                 </div>
-              </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -661,9 +775,8 @@ const PlannerWorkspace = () =>
           </div>
         </footer>
       </div>
-    </>
+    </PageTransition>
   )
 }
 
 export default PlannerWorkspace
-

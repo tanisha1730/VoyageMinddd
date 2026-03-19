@@ -977,3 +977,12 @@
 {"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-02-15T10:05:28.009Z"}
 {"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-02-15T10:05:44.030Z"}
 {"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-15T10:05:44.067Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.764Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.758Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.023Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.070Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.339Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.875Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.174Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.621Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.682Z"}

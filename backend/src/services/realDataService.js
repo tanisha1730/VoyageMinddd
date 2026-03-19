@@ -1,6 +1,8 @@
 const axios = require( 'axios' );
 const logger = require( '../utils/logger' );
 const { getRealPlacesForDestination, searchPlacesByCategory, getPopularPlaces } = require( './comprehensiveRealPlacesDB' );
+const placePersistenceService = require( './placePersistenceService' );
+
 
 class RealDataService
 {
@@ -227,8 +229,20 @@ class RealDataService
       console.error( `❌ NO PLACES FOUND for ${ destination }!` );
     }
 
+    // Persistence: Save newly discovered places to MongoDB for future use
+    try
+    {
+      // We pass destination as city. country might be harder to determine perfectly here
+      // but placePersistenceService handles Unknowns.
+      placePersistenceService.upsertPlaces( uniquePlaces, destination );
+    } catch ( persistError )
+    {
+      console.warn( 'Silent failure persisting places:', persistError.message );
+    }
+
     return uniquePlaces;
   }
+
 
   enhancePlaces ( places )
   {

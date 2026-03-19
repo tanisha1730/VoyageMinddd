@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Share2, Download, Edit3 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { itineraryAPI, exportAPI, handleAPIError } from '../services/api';
@@ -13,6 +13,7 @@ const ItineraryView = () =>
 {
   // Extract the 'id' parameter from the URL (e.g., /itinerary/:id)
   const { id } = useParams();
+  const location = useLocation();
 
   // Hook for programmatic navigation
   const navigate = useNavigate();
@@ -40,8 +41,16 @@ const ItineraryView = () =>
   {
     try
     {
-      // Set loading state to true before starting fetch
       setLoading( true );
+
+      // Check if itinerary was passed in navigation state
+      if ( location.state?.itinerary )
+      {
+        console.log( '✅ Loaded itinerary from navigation state' );
+        setItinerary( location.state.itinerary );
+        setLoading( false );
+        return;
+      }
 
       // Try fetching from the API first
       try

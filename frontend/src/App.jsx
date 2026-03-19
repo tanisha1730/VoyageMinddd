@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import { useAuth } from './contexts/AuthContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -18,6 +19,8 @@ function App ()
 {
   const { user, loading } = useAuth()
 
+  const location = useLocation()
+
   if ( loading )
   {
     return (
@@ -28,106 +31,108 @@ function App ()
   }
 
   return (
-    <Routes>
-      {/* Public routes */ }
-      <Route path="/" element={ <Home /> } />
-      <Route path="/contact" element={ <Contact /> } />
-      <Route
-        path="/login"
-        element={ user ? <Navigate to="/dashboard" /> : <Login /> }
-      />
-      <Route
-        path="/register"
-        element={ user ? <Navigate to="/dashboard" /> : <Register /> }
-      />
+    <AnimatePresence mode="wait">
+      <Routes location={ location } key={ location.pathname }>
+        {/* Public routes */ }
+        <Route path="/" element={ <Home /> } />
+        <Route path="/contact" element={ <Contact /> } />
+        <Route
+          path="/login"
+          element={ user ? <Navigate to="/dashboard" /> : <Login /> }
+        />
+        <Route
+          path="/register"
+          element={ user ? <Navigate to="/dashboard" /> : <Register /> }
+        />
 
-      {/* Protected routes */ }
-      <Route
-        path="/dashboard"
-        element={
-          user ? (
-            <Layout>
-              <Dashboard />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/planner"
-        element={
-          user ? (
-            <PlannerWorkspace />
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/booking"
-        element={
-          user ? (
-            <Layout>
-              <BookingPage />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/itinerary/:id"
-        element={
-          user ? (
-            <Layout>
-              <ItineraryView />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/memories"
-        element={
-          user ? (
-            <Layout>
-              <MemoryStudio />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/profile"
-        element={
-          user ? (
-            <Layout>
-              <Profile />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
-      <Route
-        path="/recommendations"
-        element={
-          user ? (
-            <Layout>
-              <Recommendations />
-            </Layout>
-          ) : (
-            <Navigate to="/login" />
-          )
-        }
-      />
+        {/* Protected routes */ }
+        <Route
+          path="/dashboard"
+          element={
+            user ? (
+              <Layout>
+                <Dashboard />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/planner"
+          element={
+            user ? (
+              <PlannerWorkspace />
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/booking"
+          element={
+            user ? (
+              <Layout>
+                <BookingPage />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/itinerary/:id"
+          element={
+            user ? (
+              <Layout>
+                <ItineraryView />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/memories"
+          element={
+            user ? (
+              <Layout>
+                <MemoryStudio />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            user ? (
+              <Layout>
+                <Profile />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
+        <Route
+          path="/recommendations"
+          element={
+            user ? (
+              <Layout>
+                <Recommendations />
+              </Layout>
+            ) : (
+              <Navigate to="/login" />
+            )
+          }
+        />
 
-      {/* Catch all route */ }
-      <Route path="*" element={ <Navigate to="/" /> } />
-    </Routes>
+        {/* Catch all route */ }
+        <Route path="*" element={ <Navigate to="/" /> } />
+      </Routes>
+    </AnimatePresence>
   )
 }
 

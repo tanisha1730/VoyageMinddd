@@ -13820,3 +13820,342 @@
 {"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-16T14:32:39.144Z"}
 {"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-16","service":"ai-travel-planner-backend","timestamp":"2026-02-16T14:32:39.274Z"}
 {"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-16T14:32:39.275Z"}
+{"level":"info","message":"User logged in: tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-02-17T09:21:54.410Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:14.392Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:14.392Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:14.394Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:14.394Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:21.174Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:21.175Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:21.178Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T10:00:21.179Z"}
+{"level":"info","message":"User logged in: tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:37.949Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:48.204Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:48.205Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:48.208Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:48.209Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.750Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.750Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.773Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.774Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.797Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.798Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.812Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:50.812Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.396Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.396Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.414Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.416Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.434Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.435Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.448Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:11:55.450Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:12:05.535Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:12:05.535Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:12:05.546Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:12:05.547Z"}
+{"level":"info","message":"User logged in: tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:27:59.805Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:06.792Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:06.793Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:06.905Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:06.906Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.241Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.242Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.259Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.259Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.273Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.274Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.284Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:12.285Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:22.989Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:22.990Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:22.995Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:22.996Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.890Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.891Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.903Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.904Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.921Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.922Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.933Z"}
+{"level":"info","message":"✅ Generated 7 personalized recommendations (1 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:28:30.934Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:41.436Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:42.637Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:43.145Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:43.162Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:43.163Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:43.164Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:43.165Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:55.825Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:56.801Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:57.301Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:57.322Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:57.322Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:57.324Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:34:57.330Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:04.873Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:05.891Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:06.396Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:06.416Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:06.417Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:06.420Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:06.421Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:18.062Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.082Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.545Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.558Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.559Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.560Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:35:19.561Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to Paris for 3 with budget $50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.703Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to Paris for 3 with budget $50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.708Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.764Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.5,"destination":0.8},"days":3,"destination":"Paris","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.772Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.777Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for Paris...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.795Z"}
+{"level":"info","message":"📍 Geocoding Paris using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:35.798Z"}
+{"level":"info","message":"✅ Coordinates: 48.8588897, 2.320041","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:36.891Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:36.893Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:36.896Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:55.002Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:56.063Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:57.326Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:57.344Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:57.346Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:57.347Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:57.348Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to Paris for 3 with budget $50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.699Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to Paris for 3 with budget $50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.702Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.758Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.5,"destination":0.8},"days":3,"destination":"Paris","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.765Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.768Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for Paris...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.785Z"}
+{"level":"info","message":"📍 Geocoding Paris using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.788Z"}
+{"level":"info","message":"✅ Coordinates: 48.8588897, 2.320041","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.886Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.888Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:38:58.890Z"}
+{"level":"info","message":"✅ Got 100 places from Overpass API (English names only)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:35.528Z"}
+{"level":"info","message":"✅ Total unique places: 100","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:35.533Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:35.547Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.023Z"}
+{"level":"warn","message":"⚠️ Could not find Paris on Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.025Z"}
+{"level":"info","message":"🌍 Fetching real places from OpenStreetMap for: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.038Z"}
+{"level":"info","message":"🔍 Geocoding location: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.041Z"}
+{"level":"info","message":"📡 Geocoding response status: 200","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.106Z"}
+{"level":"info","message":"📊 Geocoding results count: 1","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.110Z"}
+{"level":"info","message":"✅ Location found: Paris, Île-de-France, France métropolitaine, France","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.111Z"}
+{"level":"info","message":"📍 Location found: Paris, Île-de-France, France métropolitaine, France","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.112Z"}
+{"level":"info","message":"⏳ Waiting 927ms to respect OpenStreetMap rate limit...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:36.114Z"}
+{"level":"info","message":"🗺️ Fetching places from OpenStreetMap near 48.8588897,2.320041","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:37.051Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.070Z"}
+{"level":"info","message":"✅ Returning 0 real places from OpenStreetMap","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.072Z"}
+{"level":"info","message":"✅ Found 100 real places from Google API","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.092Z"}
+{"level":"info","message":"📋 Initial real places: 100","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.095Z"}
+{"level":"info","message":"✅ Using 100 REAL places only","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.099Z"}
+{"0":"The Army Museum","1":"The Village Terrazza","2":"Le Severo","3":"Point Zero for French Road Measurements","4":"Bar Hemingway","level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.101Z"}
+{"level":"info","message":"🎯 Getting PERSONALIZED recommendations from REAL places...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.102Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.105Z"}
+{"level":"info","message":"✅ User profile analyzed: 1 trips, top interests: name, addr:street, addr:city","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.259Z"}
+{"level":"info","message":"✨ Personalized 100 places based on your travel history","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.269Z"}
+{"level":"info","message":"🎯 Getting recommendations for Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.271Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.339Z"}
+{"level":"info","message":"🎯 Generated 100 ML recommendations with personalization","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.346Z"}
+{"level":"info","message":"🗓️ Planning 7 places per day for 3 days (total: 21)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.347Z"}
+{"level":"info","message":"📊 Available recommendations: 100","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.349Z"}
+{"level":"info","message":"🎯 Final unique recommendations: 21","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.350Z"}
+{"level":"info","message":"⚡ Creating SUPER INTELLIGENT itinerary with 7 places per day...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.355Z"}
+{"level":"info","message":"🎯 Building 3-day itinerary for Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.371Z"}
+{"level":"info","message":"📦 Received 100 total places","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.372Z"}
+{"level":"info","message":"📦 Using 100 places for itinerary building","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.374Z"}
+{"level":"info","message":"📊 Categorized: 5 attractions, 94 restaurants, 0 nature, 1 shopping, 0 viewpoints","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.381Z"}
+{"level":"info","message":"📊 Available places: 6 activities, 93 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.386Z"}
+{"level":"info","message":"🎯 Need: 12 activities, 9 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.387Z"}
+{"level":"info","message":"✅ Have: 6 activities, 93 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.391Z"}
+{"level":"warn","message":"⚠️ Insufficient activities! Expanding pool...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.394Z"}
+{"level":"info","message":"🔄 Creating 6 place variations...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.398Z"}
+{"level":"info","message":"✅ Expanded to 12 activities","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.400Z"}
+{"level":"info","message":"📝 Sample activities: The Army Museum, Point Zero for French Road Measurements, Espace Dali, Maison de Victor Hugo, Lelong & Co.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.402Z"}
+{"level":"info","message":"📝 Sample restaurants: The Village Terrazza, Le Severo, Bar Hemingway, Uno, La Crypte Polska","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.404Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Qasim","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.412Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.416Z"}
+{"level":"info","message":"✅ Final: \"Qasim\" → \"Qasim, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.418Z"}
+{"level":"info","message":"✅ Selected NEW activity: Maison de Victor Hugo","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.421Z"}
+{"level":"info","message":"✅ Using place.city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.423Z"}
+{"level":"info","message":"✅ Final: \"Maison de Victor Hugo\" → \"Maison de Victor Hugo, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.425Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Le Syphax","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.427Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.428Z"}
+{"level":"info","message":"✅ Final: \"Le Syphax\" → \"Le Syphax, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.430Z"}
+{"level":"info","message":"✅ Selected NEW activity: Point Zero for French Road Measurements","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.432Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.435Z"}
+{"level":"info","message":"✅ Final: \"Point Zero for French Road Measurements\" → \"Point Zero for French Road Measurements, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.438Z"}
+{"level":"info","message":"✅ Selected NEW activity: The Army Museum","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.439Z"}
+{"level":"info","message":"✅ Using place.city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.441Z"}
+{"level":"info","message":"✅ Final: \"The Army Museum\" → \"The Army Museum, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.442Z"}
+{"level":"info","message":"✅ Selected NEW activity: Espace Dali","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.443Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.445Z"}
+{"level":"info","message":"✅ Final: \"Espace Dali\" → \"Espace Dali, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.445Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Louloute","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.446Z"}
+{"level":"info","message":"✅ Using place.city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.447Z"}
+{"level":"info","message":"✅ Final: \"Louloute\" → \"Louloute, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.447Z"}
+{"level":"info","message":"✅ Day 1: 8 places, Qasim, Paris, Maison de Victor Hugo, Paris, Le Syphax, Paris, Point Zero for French Road Measurements, Paris, The Army Museum, Paris, Espace Dali, Paris, Louloute, Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.449Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Chouette","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.450Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.454Z"}
+{"level":"info","message":"✅ Final: \"Chouette\" → \"Chouette, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.456Z"}
+{"level":"info","message":"✅ Selected NEW activity: Lelong & Co.","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.457Z"}
+{"level":"info","message":"✅ Using place.city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.459Z"}
+{"level":"info","message":"✅ Final: \"Lelong & Co.\" → \"Lelong & Co., Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.461Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: La Perla","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.465Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.466Z"}
+{"level":"info","message":"✅ Final: \"La Perla\" → \"La Perla, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.467Z"}
+{"level":"info","message":"✅ Selected NEW activity: Passages des Princes","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.469Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.470Z"}
+{"level":"info","message":"✅ Final: \"Passages des Princes\" → \"Passages des Princes, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.471Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.472Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.474Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Le Cyrano","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.477Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.478Z"}
+{"level":"info","message":"✅ Final: \"Le Cyrano\" → \"Le Cyrano, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.478Z"}
+{"level":"info","message":"✅ Day 2: 5 places, Chouette, Paris, Lelong & Co., Paris, La Perla, Paris, Passages des Princes, Paris, Le Cyrano, Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.480Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: L'Excuse","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.481Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.482Z"}
+{"level":"info","message":"✅ Final: \"L'Excuse\" → \"L'Excuse, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.482Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.488Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: La Cordonnerie","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.489Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.490Z"}
+{"level":"info","message":"✅ Final: \"La Cordonnerie\" → \"La Cordonnerie, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.491Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.493Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.495Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.499Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Doppio","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.500Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.501Z"}
+{"level":"info","message":"✅ Final: \"Doppio\" → \"Doppio, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.501Z"}
+{"level":"info","message":"✅ Day 3: 4 places, L'Excuse, Paris, La Cordonnerie, Paris, Doppio, Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.502Z"}
+{"level":"info","message":"✅ Generated INTELLIGENT plan with 3 days","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.502Z"}
+{"level":"info","message":"🎯 USING INTELLIGENT BUILDER OUTPUT DIRECTLY!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.503Z"}
+{"level":"info","message":"✅ Using intelligent builder plan with 3 days (requested: 3)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.503Z"}
+{"level":"info","message":"🎯 Intelligent builder guaranteed 3 days!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.504Z"}
+{"level":"info","message":"🌤️ Getting weather forecast...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.505Z"}
+{"level":"info","message":"✅ Using intelligent builder's plan directly - no enhancement needed!","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.523Z"}
+{"level":"info","message":"🌍 Adding translations and multi-currency pricing...","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.526Z"}
+{"entry_fee":35,"level":"info","message":"📝 Sample place after processing:","name":"Qasim","pricing":{"display":"$35.00 (€32.20 / ₹2909.20)","inr":{"amount":2909.2,"formatted":"₹2909.20"},"local":{"amount":32.2,"currency":"EUR","formatted":"€32.20"},"usd":{"amount":35,"formatted":"$35.00"}},"service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.568Z"}
+{"level":"info","message":"✅ Translations and pricing added to all 3 days","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:52.583Z"}
+{"level":"info","message":"✅ Realtime itinerary saved to database successfully","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:53.222Z"}
+{"level":"info","message":"✅ Real-time itinerary generated successfully for Paris","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:53.226Z"}
+{"level":"info","message":"Places persistence complete: 100 processed, 0 failed","service":"ai-travel-planner-backend","timestamp":"2026-02-17T13:39:55.379Z"}
+{"level":"info","message":"User logged in: tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:47.906Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.486Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.488Z"}
+{"level":"info","message":"✅ User profile analyzed: 2 trips, top interests: name, addr:street, amenity","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.519Z"}
+{"level":"info","message":"✅ Generated 6 personalized recommendations (2 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.523Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.548Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69917c729a2fc2bd91e30063","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.548Z"}
+{"level":"info","message":"✅ User profile analyzed: 2 trips, top interests: name, addr:street, amenity","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.567Z"}
+{"level":"info","message":"✅ Generated 6 personalized recommendations (2 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:18:51.568Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:19:11.478Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:19:11.479Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-02-17","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:19:11.491Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-02-17T14:19:11.491Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:07:59.170Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:00.715Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:02.104Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:02.120Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:02.122Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:02.124Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:02.125Z"}
+{"level":"warn","message":"❌ Login failed: Invalid password for tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:48.032Z"}
+{"level":"warn","message":"❌ Login failed: Invalid password for tanishabhalgamia@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:08:54.352Z"}
+{"level":"info","message":"User registered: tannie@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:09:41.345Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to Paris for 4 with budget $50000 interested in Everything","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.827Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to Paris for 4 with budget $50000 interested in Everything","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.829Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.875Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.5,"destination":0.8},"days":3,"destination":"Paris","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.881Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.883Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for Paris...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.898Z"}
+{"level":"info","message":"📍 Geocoding Paris using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:20.904Z"}
+{"level":"info","message":"✅ Coordinates: 48.8588897, 2.320041","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:22.095Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:22.096Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:22.099Z"}
+{"level":"warn","message":"⚠️ Overpass API failed: Request failed with status code 504","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:27.407Z"}
+{"level":"info","message":"✅ Total unique places: 0","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:27.417Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:27.430Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.174Z"}
+{"level":"warn","message":"⚠️ Could not find Paris on Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.298Z"}
+{"level":"info","message":"🌍 Fetching real places from OpenStreetMap for: Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.330Z"}
+{"level":"info","message":"🔍 Geocoding location: Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.352Z"}
+{"level":"info","message":"📡 Geocoding response status: 200","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.394Z"}
+{"level":"info","message":"📊 Geocoding results count: 1","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.395Z"}
+{"level":"info","message":"✅ Location found: Paris, Île-de-France, France métropolitaine, France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.396Z"}
+{"level":"info","message":"📍 Location found: Paris, Île-de-France, France métropolitaine, France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.397Z"}
+{"level":"info","message":"⏳ Waiting 953ms to respect OpenStreetMap rate limit...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.399Z"}
+{"level":"info","message":"🗺️ Fetching places from OpenStreetMap near 48.8588897,2.320041","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:29.367Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.621Z"}
+{"level":"info","message":"✅ Returning 0 real places from OpenStreetMap","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.621Z"}
+{"level":"info","message":"✅ Found 4 real places from Google API","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.630Z"}
+{"level":"warn","message":"⚠️ Only 4 places from APIs, using comprehensive database as fallback","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.631Z"}
+{"level":"info","message":"✅ Added 4 places from comprehensive database","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.633Z"}
+{"level":"info","message":"✅ Total unique places after deduplication: 4","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.634Z"}
+{"level":"info","message":"📋 Initial real places: 4","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.635Z"}
+{"level":"info","message":"✅ Using 4 REAL places only","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.635Z"}
+{"0":"Eiffel Tower","1":"Louvre Museum","2":"Notre-Dame Cathedral","3":"Champs-Élysées","level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.636Z"}
+{"level":"info","message":"🎯 Getting PERSONALIZED recommendations from REAL places...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.637Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.638Z"}
+{"level":"info","message":"📊 New user - no travel history yet","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.670Z"}
+{"level":"info","message":"✨ Personalized 4 places based on your travel history","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.672Z"}
+{"level":"info","message":"🎯 Getting recommendations for Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.673Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.682Z"}
+{"level":"info","message":"🎯 Generated 4 ML recommendations with personalization","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.683Z"}
+{"level":"info","message":"🗓️ Planning 5 places per day for 3 days (total: 15)","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.683Z"}
+{"level":"info","message":"📊 Available recommendations: 4","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.684Z"}
+{"level":"info","message":"⚠️ Need more places! Have 4, need 15","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.685Z"}
+{"level":"info","message":"✅ Added 0 additional unique places","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.686Z"}
+{"level":"info","message":"🎯 Final unique recommendations: 4","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.686Z"}
+{"level":"info","message":"⚡ Creating SUPER INTELLIGENT itinerary with 7 places per day...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.687Z"}
+{"level":"info","message":"🎯 Building 3-day itinerary for Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.695Z"}
+{"level":"info","message":"📦 Received 4 total places","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.697Z"}
+{"level":"info","message":"📦 Using 4 places for itinerary building","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.698Z"}
+{"level":"info","message":"📊 Categorized: 3 attractions, 0 restaurants, 0 nature, 1 shopping, 0 viewpoints","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.699Z"}
+{"level":"info","message":"📊 Available places: 4 activities, 0 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.701Z"}
+{"level":"info","message":"🎯 Need: 12 activities, 9 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.702Z"}
+{"level":"info","message":"✅ Have: 4 activities, 0 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.703Z"}
+{"level":"warn","message":"⚠️ Insufficient activities! Expanding pool...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.704Z"}
+{"level":"info","message":"🔄 Creating 8 place variations...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.705Z"}
+{"level":"info","message":"✅ Expanded to 12 activities","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.706Z"}
+{"level":"warn","message":"⚠️ Insufficient restaurants! Expanding pool...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.706Z"}
+{"level":"info","message":"✅ Expanded to 0 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.707Z"}
+{"level":"info","message":"📝 Sample activities: Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, Champs-Élysées, Eiffel Tower","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.708Z"}
+{"level":"info","message":"📝 Sample restaurants: ","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.708Z"}
+{"level":"info","message":"✅ Selected NEW activity: Eiffel Tower","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.711Z"}
+{"level":"info","message":"✅ Extracted from address: France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.713Z"}
+{"level":"info","message":"✅ Final: \"Eiffel Tower\" → \"Eiffel Tower, France\"","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.713Z"}
+{"level":"info","message":"✅ Selected NEW activity: Champs-Élysées","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.714Z"}
+{"level":"info","message":"✅ Using default city: Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.715Z"}
+{"level":"info","message":"✅ Final: \"Champs-Élysées\" → \"Champs-Élysées, Paris\"","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.716Z"}
+{"level":"info","message":"✅ Selected NEW activity: Notre-Dame Cathedral","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.716Z"}
+{"level":"info","message":"✅ Extracted from address: France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.717Z"}
+{"level":"info","message":"✅ Final: \"Notre-Dame Cathedral\" → \"Notre-Dame Cathedral, France\"","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.718Z"}
+{"level":"info","message":"✅ Selected NEW activity: Louvre Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.719Z"}
+{"level":"info","message":"✅ Extracted from address: France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.720Z"}
+{"level":"info","message":"✅ Final: \"Louvre Museum\" → \"Louvre Museum, France\"","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.721Z"}
+{"level":"info","message":"✅ Day 1: 5 places, Eiffel Tower, France, Champs-Élysées, Paris, Notre-Dame Cathedral, France, Louvre Museum, France","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.722Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.722Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.723Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.723Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.724Z"}
+{"level":"info","message":"✅ Day 2: 0 places, ","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.724Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.727Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.727Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.728Z"}
+{"level":"warn","message":"⚠️ WARNING: Ran out of unique activities!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.729Z"}
+{"level":"info","message":"✅ Day 3: 1 places, ","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.729Z"}
+{"level":"info","message":"✅ Generated INTELLIGENT plan with 3 days","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.730Z"}
+{"level":"info","message":"🎯 USING INTELLIGENT BUILDER OUTPUT DIRECTLY!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.731Z"}
+{"level":"info","message":"✅ Using intelligent builder plan with 3 days (requested: 3)","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.731Z"}
+{"level":"info","message":"🎯 Intelligent builder guaranteed 3 days!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.732Z"}
+{"level":"info","message":"🌤️ Getting weather forecast...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.732Z"}
+{"level":"info","message":"✅ Using intelligent builder's plan directly - no enhancement needed!","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.735Z"}
+{"level":"info","message":"🌍 Adding translations and multi-currency pricing...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.736Z"}
+{"entry_fee":29,"level":"info","message":"📝 Sample place after processing:","name":"Eiffel Tower","pricing":{"display":"$29.00 (€26.68 / ₹2410.48)","inr":{"amount":2410.48,"formatted":"₹2410.48"},"local":{"amount":26.68,"currency":"EUR","formatted":"€26.68"},"usd":{"amount":29,"formatted":"$29.00"}},"service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.748Z"}
+{"level":"info","message":"✅ Translations and pricing added to all 3 days","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.750Z"}
+{"level":"info","message":"✅ Realtime itinerary saved to database successfully","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.882Z"}
+{"level":"info","message":"✅ Real-time itinerary generated successfully for Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.883Z"}
+{"level":"info","message":"Places persistence complete: 4 processed, 0 failed","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.990Z"}

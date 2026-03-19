@@ -1,25 +1,27 @@
-const express = require('express');
-const Joi = require('joi');
-const Place = require('../models/Place');
-const mapsService = require('../services/mapsService');
-const { validateQuery } = require('../middleware/validation');
-const { optionalAuth } = require('../middleware/auth');
+const express = require( 'express' );
+const Joi = require( 'joi' );
+const Place = require( '../models/Place' );
+const mapsService = require( '../services/mapsService' );
+const placePersistenceService = require( '../services/placePersistenceService' );
+const { validateQuery } = require( '../middleware/validation' );
+
+const { optionalAuth } = require( '../middleware/auth' );
 
 const router = express.Router();
 
 // Validation schemas
-const searchSchema = Joi.object({
-  q: Joi.string().trim().min(1).max(100),
-  city: Joi.string().trim().max(100),
-  country: Joi.string().trim().max(100),
+const searchSchema = Joi.object( {
+  q: Joi.string().trim().min( 1 ).max( 100 ),
+  city: Joi.string().trim().max( 100 ),
+  country: Joi.string().trim().max( 100 ),
   tags: Joi.string().trim(),
-  rating: Joi.number().min(0).max(5),
-  lat: Joi.number().min(-90).max(90),
-  lng: Joi.number().min(-180).max(180),
-  radius: Joi.number().min(100).max(50000).default(5000),
-  limit: Joi.number().min(1).max(100).default(20),
-  offset: Joi.number().min(0).default(0)
-});
+  rating: Joi.number().min( 0 ).max( 5 ),
+  lat: Joi.number().min( -90 ).max( 90 ),
+  lng: Joi.number().min( -180 ).max( 180 ),
+  radius: Joi.number().min( 100 ).max( 50000 ).default( 5000 ),
+  limit: Joi.number().min( 1 ).max( 100 ).default( 20 ),
+  offset: Joi.number().min( 0 ).default( 0 )
+} );
 
 /**
  * @swagger
@@ -95,15 +97,18 @@ const searchSchema = Joi.object({
  *                 has_more:
  *                   type: boolean
  */
-router.get('/search', optionalAuth, validateQuery(searchSchema), async (req, res, next) => {
-  try {
+router.get( '/search', optionalAuth, validateQuery( searchSchema ), async ( req, res, next ) =>
+{
+  try
+  {
     const { q, city, country, tags, rating, lat, lng, radius, limit, offset } = req.query;
 
     let query = {};
     let places = [];
 
     // Build MongoDB query
-    if (q) {
+    if ( q )
+    {
       query.$or = [
         { name: { $regex: q, $options: 'i' } },
         { tags: { $regex: q, $options: 'i' } },
@@ -111,30 +116,35 @@ router.get('/search', optionalAuth, validateQuery(searchSchema), async (req, res
       ];
     }
 
-    if (city) {
+    if ( city )
+    {
       query.city = { $regex: city, $options: 'i' };
     }
 
-    if (country) {
+    if ( country )
+    {
       query.country = { $regex: country, $options: 'i' };
     }
 
-    if (tags) {
-      const tagArray = tags.split(',').map(tag => tag.trim());
+    if ( tags )
+    {
+      const tagArray = tags.split( ',' ).map( tag => tag.trim() );
       query.tags = { $in: tagArray };
     }
 
-    if (rating) {
+    if ( rating )
+    {
       query.rating = { $gte: rating };
     }
 
     // Location-based search
-    if (lat && lng) {
+    if ( lat && lng )
+    {
       query.location = {
         $near: {
           $geometry: {
             type: 'Point',
-            coordinates: [lng, lat]
+            coordinates: [ lng, lat ]
           },
           $maxDistance: radius
         }
@@ -142,42 +152,56 @@ router.get('/search', optionalAuth, validateQuery(searchSchema), async (req, res
     }
 
     // Execute database query
-    const dbPlaces = await Place.find(query)
-      .sort({ rating: -1, name: 1 })
-      .limit(limit)
-      .skip(offset)
+    const dbPlaces = await Place.find( query )
+      .sort( { rating: -1, name: 1 } )
+      .limit( limit )
+      .skip( offset )
       .lean();
 
     places = dbPlaces;
 
     // If we have location and few results, supplement with Google Places
-    if (lat && lng && places.length < limit / 2 && q) {
-      try {
-        const googlePlaces = await mapsService.searchPlaces(q, { lat, lng }, radius);
-        
+    if ( lat && lng && places.length < limit / 2 && q )
+    {
+      try
+      {
+        const googlePlaces = await mapsService.searchPlaces( q, { lat, lng }, radius );
+
+        // Caching: Save newly discovered places to database
+        try
+        {
+          // We pass city/country from query if available
+          placePersistenceService.upsertPlaces( googlePlaces, city, country );
+        } catch ( persistError )
+        {
+          console.warn( 'Failed to persist supplemental places:', persistError.message );
+        }
+
         // Filter out places we already have
-        const existingPlaceIds = new Set(places.map(p => p.place_id));
-        const newPlaces = googlePlaces.filter(p => !existingPlaceIds.has(p.place_id));
-        
-        places = [...places, ...newPlaces.slice(0, limit - places.length)];
-      } catch (error) {
+        const existingPlaceIds = new Set( places.map( p => p.place_id ) );
+        const newPlaces = googlePlaces.filter( p => !existingPlaceIds.has( p.place_id ) );
+
+        places = [ ...places, ...newPlaces.slice( 0, limit - places.length ) ];
+      } catch ( error )
+      {
         // Continue with database results if Google Places fails
-        console.warn('Google Places search failed:', error.message);
+        console.warn( 'Google Places search failed:', error.message );
       }
     }
 
-    const total = await Place.countDocuments(query);
+    const total = await Place.countDocuments( query );
     const hasMore = offset + limit < total;
 
-    res.json({
+    res.json( {
       places,
       total,
       has_more: hasMore
-    });
-  } catch (error) {
-    next(error);
+    } );
+  } catch ( error )
+  {
+    next( error );
   }
-});
+} );
 
 /**
  * @swagger
@@ -202,27 +226,45 @@ router.get('/search', optionalAuth, validateQuery(searchSchema), async (req, res
  *       404:
  *         description: Place not found
  */
-router.get('/:id', optionalAuth, async (req, res, next) => {
-  try {
+router.get( '/:id', optionalAuth, async ( req, res, next ) =>
+{
+  try
+  {
     const { id } = req.params;
 
     // Try to find in database first
-    let place = await Place.findOne({ place_id: id }).lean();
+    let place = await Place.findOne( { place_id: id } ).lean();
 
     // If not found in database, try Google Places
-    if (!place) {
-      try {
-        place = await mapsService.getPlaceDetails(id);
-      } catch (error) {
-        return res.status(404).json({ error: 'Place not found' });
+    if ( !place )
+    {
+      try
+      {
+        place = await mapsService.getPlaceDetails( id );
+
+        // Caching: Save to database for future lookups
+        if ( place )
+        {
+          try
+          {
+            placePersistenceService.savePlace( place );
+          } catch ( persistError )
+          {
+            console.warn( 'Failed to persist place details:', persistError.message );
+          }
+        }
+      } catch ( error )
+      {
+        return res.status( 404 ).json( { error: 'Place not found' } );
       }
     }
 
-    res.json(place);
-  } catch (error) {
-    next(error);
+    res.json( place );
+  } catch ( error )
+  {
+    next( error );
   }
-});
+} );
 
 /**
  * @swagger
@@ -257,12 +299,15 @@ router.get('/:id', optionalAuth, async (req, res, next) => {
  *       200:
  *         description: List of nearby places
  */
-router.get('/nearby', optionalAuth, async (req, res, next) => {
-  try {
+router.get( '/nearby', optionalAuth, async ( req, res, next ) =>
+{
+  try
+  {
     const { lat, lng, radius = 1000, type } = req.query;
 
-    if (!lat || !lng) {
-      return res.status(400).json({ error: 'Latitude and longitude are required' });
+    if ( !lat || !lng )
+    {
+      return res.status( 400 ).json( { error: 'Latitude and longitude are required' } );
     }
 
     let query = {
@@ -270,25 +315,27 @@ router.get('/nearby', optionalAuth, async (req, res, next) => {
         $near: {
           $geometry: {
             type: 'Point',
-            coordinates: [parseFloat(lng), parseFloat(lat)]
+            coordinates: [ parseFloat( lng ), parseFloat( lat ) ]
           },
-          $maxDistance: parseInt(radius)
+          $maxDistance: parseInt( radius )
         }
       }
     };
 
-    if (type) {
+    if ( type )
+    {
       query.category = type;
     }
 
-    const places = await Place.find(query)
-      .limit(20)
+    const places = await Place.find( query )
+      .limit( 20 )
       .lean();
 
-    res.json({ places });
-  } catch (error) {
-    next(error);
+    res.json( { places } );
+  } catch ( error )
+  {
+    next( error );
   }
-});
+} );
 
 module.exports = router;
