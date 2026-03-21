@@ -16429,3 +16429,19 @@
 {"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T18:35:43.726Z"}
 {"level":"info","message":"✅ User profile analyzed: 14 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-21T18:35:44.715Z"}
 {"level":"info","message":"✅ Generated 6 personalized recommendations (14 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T18:35:44.716Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-03-21","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.004Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.007Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-03-21","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.024Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.025Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-03-21","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.743Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.743Z"}
+{"level":"info","message":"✈️ Searching flights: NYC -> LON on 2026-03-21","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.747Z"}
+{"level":"info","message":"🎭 Generating mock flight data","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:49.748Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.819Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.819Z"}
+{"level":"info","message":"✅ User profile analyzed: 14 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.892Z"}
+{"level":"info","message":"✅ Generated 6 personalized recommendations (14 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.894Z"}
+{"level":"info","message":"🎯 Getting destination recommendations for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.912Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.913Z"}
+{"level":"info","message":"✅ User profile analyzed: 14 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.958Z"}
+{"level":"info","message":"✅ Generated 6 personalized recommendations (14 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.960Z"}
