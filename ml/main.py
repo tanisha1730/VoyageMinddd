@@ -12,6 +12,10 @@ import json
 
 app = FastAPI(title="AI Travel Planner ML Service", version="1.0.0")
 
+@app.get("/health")
+def health_check():
+    return {"status": "healthy", "timestamp": "ok"}
+
 # Simplified NLP without spaCy for now
 nlp = None
 
@@ -661,4 +665,6 @@ def generate_dynamic_story(prompt: str) -> str:
     return story
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
