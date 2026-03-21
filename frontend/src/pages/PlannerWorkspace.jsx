@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { itineraryAPI, realtimeAPI, exportAPI, handleAPIError } from '../services/api'
-import { Sparkles, MapPin, Calendar, DollarSign, Users, Save, Download, User, FileText, BookOpen, Menu, X } from 'lucide-react'
+import { Sparkles, MapPin, Calendar, DollarSign, Users, Save, Download, User, FileText, BookOpen, Menu, X, Compass } from 'lucide-react'
 import LoadingSpinner from '../components/LoadingSpinner'
 import TravelLoadingAnimation from '../components/TravelLoadingAnimation'
 import toast from 'react-hot-toast'
 import localStorageService from '../services/localStorageService'
+import { formatEntryFee } from '../utils/currencyUtils'
 
 import MapComponent from '../components/MapComponent'
 import PageTransition from '../components/PageTransition'
@@ -105,13 +106,39 @@ const PlannerWorkspace = () =>
       return
     }
 
+    if ( !formData.dates.trim() )
+    {
+      toast.error( 'Please enter number of days' )
+      return
+    }
+
+    if ( !formData.budget.trim() )
+    {
+      toast.error( 'Please enter your budget' )
+      return
+    }
+
+    if ( !formData.interests.trim() )
+    {
+      toast.error( 'Please enter some interests or must-do things' )
+      return
+    }
+
+    if ( daysError )
+    {
+      toast.error( daysError )
+      return
+    }
+
     setGenerating( true )
     try
     {
-      const query = `Plan a trip to ${ formData.destination }${ formData.dates ? ` for ${ formData.dates }` : '' }${ formData.budget ? ` with budget ${ formData.budget }` : '' }${ formData.interests ? ` interested in ${ formData.interests }` : '' }`
+      const formattedDates = formData.dates ? (formData.dates.toLowerCase().includes('day') ? formData.dates : `${formData.dates} days`) : '';
+      const query = `Plan a trip to ${ formData.destination }${ formattedDates ? ` for ${ formattedDates }` : '' }${ formData.budget ? ` with budget ${ formData.budget }` : '' }${ formData.interests ? ` interested in ${ formData.interests }` : '' }`
 
       const response = await realtimeAPI.generateItinerary( query, {
         budget: 'medium',
+        rawBudget: formData.budget, // Raw budget string for currency detection (e.g. '$5000', '50000INR')
         interests: formData.interests.split( ',' ).map( i => i.trim().toLowerCase() )
       } )
 
@@ -187,12 +214,10 @@ const PlannerWorkspace = () =>
         <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
           <nav className="mx-auto max-w-7xl px-8 lg:px-12">
             <div className="flex h-24 items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <Link to="/" className="text-2xl font-bold text-gray-900">
-                  voyagemind
+                <Link to="/" className="flex items-center space-x-2">
+                  <Compass className="w-8 h-8 text-gray-900" />
+                  <span className="text-2xl font-bold text-gray-900 tracking-tight">VoyageMind</span>
                 </Link>
-              </div>
 
               {/* Desktop Navigation */ }
               <div className="hidden md:flex items-center space-x-12">
@@ -244,8 +269,8 @@ const PlannerWorkspace = () =>
               <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
                   <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="text-2xl font-bold text-gray-900">voyagemind</span>
+                    <Compass className="w-8 h-8 text-gray-900" />
+                    <span className="text-2xl font-bold text-gray-900 tracking-tight">VoyageMind</span>
                   </Link>
                   <button
                     type="button"
@@ -414,7 +439,7 @@ const PlannerWorkspace = () =>
                   {/* Interests */ }
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Must-dos & interests
+                      Must-dos & interests <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       name="interests"
@@ -435,7 +460,7 @@ const PlannerWorkspace = () =>
                   </div>
                   <button
                     onClick={ handleGenerateItinerary }
-                    disabled={ generating || !formData.destination }
+                    disabled={ generating }
                     className="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     { generating ? (
@@ -605,7 +630,7 @@ const PlannerWorkspace = () =>
 
                                             { place.entry_fee !== undefined && (
                                               <span className="text-gray-500 font-semibold pl-1">
-                                                ${ place.entry_fee === 0 ? 'Free' : place.entry_fee }
+                                                { formatEntryFee( place, itinerary?.destination ) || 'Free' }
                                               </span>
                                             ) }
                                           </div>
@@ -750,8 +775,8 @@ const PlannerWorkspace = () =>
           <div className="mx-auto max-w-7xl px-8 lg:px-12">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <span className="text-xl font-bold text-gray-900">voyagemind</span>
+                <Compass className="w-6 h-6 text-gray-900" />
+                <span className="text-xl font-bold text-gray-900">VoyageMind</span>
               </div>
               <div className="flex items-center space-x-8 text-sm text-gray-600">
                 <Link to="/about" className="hover:text-gray-900">About</Link>
@@ -770,7 +795,7 @@ const PlannerWorkspace = () =>
               </div>
             </div>
             <div className="mt-8 text-center text-sm text-gray-500">
-              © 2025 voyageMind. All rights reserved.
+              © 2025 VoyageMind. All rights reserved.
             </div>
           </div>
         </footer>

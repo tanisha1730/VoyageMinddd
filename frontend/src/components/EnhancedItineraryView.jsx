@@ -1,5 +1,6 @@
 import React from 'react';
-import { Clock, Star, DollarSign, MapPin } from 'lucide-react';
+import { Clock, DollarSign, MapPin } from 'lucide-react';
+import { formatEntryFee } from '../utils/currencyUtils';
 
 const EnhancedItineraryView = ( { currentDayPlan, itinerary } ) =>
 {
@@ -58,7 +59,7 @@ const EnhancedItineraryView = ( { currentDayPlan, itinerary } ) =>
                   <div className="flex items-center space-x-1 text-green-700">
                     <DollarSign className="w-4 h-4" />
                     <span className="font-medium">
-                      { place.pricing?.display || ( place.entry_fee === 0 ? 'Free Entry' : `$${ place.entry_fee }` ) }
+                      { formatEntryFee( place, itinerary?.destination ) || 'Free Entry' }
                     </span>
                   </div>
                 ) }

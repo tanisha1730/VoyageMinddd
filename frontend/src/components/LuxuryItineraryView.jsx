@@ -5,6 +5,7 @@ import
   Calendar, Users, Utensils, Activity
 } from 'lucide-react';
 import EnhancedItineraryView from './EnhancedItineraryView';
+import { getCurrencyForDestination, getCurrencySymbol } from '../utils/currencyUtils';
 
 const LuxuryItineraryView = ( { itinerary } ) =>
 {
@@ -19,7 +20,7 @@ const LuxuryItineraryView = ( { itinerary } ) =>
       'cloudy': <Cloud className="w-5 h-5 text-gray-600" />,
       'rain': <CloudRain className="w-5 h-5 text-blue-500" />,
       'thunderstorm': <CloudRain className="w-5 h-5 text-purple-500" />,
-      'snow': <Cloud className="w-5 h-5 text-blue-300" />,
+      'snow': <CloudRain className="w-5 h-5 text-blue-300" />,
       'drizzle': <CloudRain className="w-5 h-5 text-blue-400" />
     };
     return icons[ condition ] || <Cloud className="w-5 h-5 text-gray-500" />;
@@ -169,9 +170,9 @@ const LuxuryItineraryView = ( { itinerary } ) =>
                         <DollarSign className="w-5 h-5 text-yellow-600" />
                         <span className="font-medium text-yellow-900">Cost</span>
                       </div>
-                      <p className="text-lg font-semibold text-yellow-900">
-                        ${ currentDayPlan.places?.reduce( ( sum, place ) => sum + ( place.entry_fee || 0 ), 0 ) || 0 }
-                      </p>
+                       <p className="text-lg font-semibold text-yellow-900">
+                         { getCurrencySymbol( getCurrencyForDestination( itinerary?.destination ) ) }{ currentDayPlan.places?.reduce( ( sum, place ) => sum + ( place.entry_fee_local ?? place.entry_fee ?? 0 ), 0 ) || 0 }
+                       </p>
                     </div>
                   </div>
                 </div>

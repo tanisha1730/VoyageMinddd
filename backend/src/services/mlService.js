@@ -140,9 +140,17 @@ class MLService
     } catch ( error )
     {
       logger.error( '❌ Text generation failed:', error.message );
-      // Fallback text generation
+      
+      // Dynamic fallback based on prompt extraction
+      const text = prompt.toLowerCase();
+      const titleMatch = prompt.match( /Trip:\s*(.+?)(?:\n|$)/i );
+      const highlightMatch = prompt.match( /Highlight:\s*(.+?)(?:\n|$)/i );
+      
+      const title = titleMatch ? titleMatch[ 1 ].trim() : 'the trip';
+      const highlight = highlightMatch ? highlightMatch[ 1 ].trim() : 'every moment was a discovery';
+      
       return {
-        text: "The journey was filled with unexpected delights. From the golden sunrise to the vibrant streets, every moment felt like a discovery. We wandered through ancient paths, tasted local flavors that danced on our tongues, and met people whose smiles were as warm as the afternoon sun. It wasn't just a trip; it was a collection of beautiful memories woven together."
+        text: `${ highlight }. Our journey through ${ title } was filled with unexpected delights. From the golden sunrise to the vibrant streets, every moment felt like a discovery. We wandered through ancient paths, tasted local flavors that danced on our tongues, and met people whose smiles were as warm as the afternoon sun. It wasn't just a trip; it was a collection of beautiful memories woven together in ${ title }.`
       };
     }
   }

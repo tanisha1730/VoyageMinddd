@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Eye, EyeOff, Compass } from 'lucide-react'
+import { Eye, EyeOff, Compass, CheckCircle, XCircle } from 'lucide-react'
 import LoadingSpinner from '../components/LoadingSpinner'
 import PageTransition from '../components/PageTransition'
 import AnimatedSection from '../components/AnimatedSection'
@@ -21,6 +21,7 @@ const Register = () =>
   } )
   const [ showPassword, setShowPassword ] = useState( false )
   const [ loading, setLoading ] = useState( false )
+  const [ touched, setTouched ] = useState( false )
   const { register } = useAuth()
   const navigate = useNavigate()
 
@@ -29,9 +30,23 @@ const Register = () =>
     'shopping', 'adventure', 'architecture', 'music'
   ]
 
+  // Password validation rules
+  const passwordRules = useMemo( () => ( {
+    minLength: formData.password.length >= 8,
+    hasUpper: /[A-Z]/.test( formData.password ),
+    hasLower: /[a-z]/.test( formData.password ),
+    hasNumber: /[0-9]/.test( formData.password ),
+    hasSpecial: /[!@#$%^&*]/.test( formData.password )
+  } ), [ formData.password ] )
+
+  const isPasswordStrong = Object.values( passwordRules ).every( Boolean )
+  const passwordsMatch = formData.password && formData.password === formData.confirmPassword
+
   const handleChange = ( e ) =>
   {
     const { name, value } = e.target
+    if ( name === 'password' ) setTouched( true )
+
     if ( name.startsWith( 'preferences.' ) )
     {
       const prefKey = name.split( '.' )[ 1 ]
@@ -71,6 +86,12 @@ const Register = () =>
   {
     e.preventDefault()
 
+    if ( !isPasswordStrong )
+    {
+      toast.error( 'Please create a strong password' )
+      return
+    }
+
     if ( formData.password !== formData.confirmPassword )
     {
       toast.error( 'Passwords do not match' )
@@ -93,6 +114,17 @@ const Register = () =>
 
     setLoading( false )
   }
+
+  const Rule = ( { label, met } ) => (
+    <div className={ `flex items-center space-x-2 text-xs transition-colors ${ !touched ? 'text-gray-400' : met ? 'text-green-600' : 'text-red-500' }` }>
+      { met ? (
+        <CheckCircle className="w-3 h-3" />
+      ) : (
+        <XCircle className="w-3 h-3" />
+      ) }
+      <span>{ label }{ met ? ' (valid)' : ' (invalid)' }</span>
+    </div>
+  )
 
   return (
     <PageTransition>
@@ -154,8 +186,8 @@ const Register = () =>
                 />
               </div>
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="space-y-2">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                   Password
                 </label>
                 <div className="relative">
@@ -182,10 +214,19 @@ const Register = () =>
                     ) }
                   </button>
                 </div>
+
+                {/* Password Rules List */ }
+                <div className="grid grid-cols-1 gap-1.5 mt-2 bg-gray-50 p-3 rounded-lg border border-gray-100">
+                  <Rule label="At least 8 characters" met={ passwordRules.minLength } />
+                  <Rule label="At least 1 uppercase (A-Z)" met={ passwordRules.hasUpper } />
+                  <Rule label="At least 1 lowercase (a-z)" met={ passwordRules.hasLower } />
+                  <Rule label="At least 1 number (0-9)" met={ passwordRules.hasNumber } />
+                  <Rule label="At least 1 special char (!@#$%^&*)" met={ passwordRules.hasSpecial } />
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-2">
+              <div className="space-y-2">
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
                   Confirm Password
                 </label>
                 <input
@@ -198,6 +239,15 @@ const Register = () =>
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#17A2B8] focus:border-transparent"
                   placeholder="Confirm your password"
                 />
+                { formData.confirmPassword && (
+                  <div className={ `text-xs font-medium flex items-center space-x-1 ${ passwordsMatch ? 'text-green-600' : 'text-red-500' }` }>
+                    { passwordsMatch ? (
+                      <><CheckCircle className="w-3 h-3" /> <span>Passwords match (valid)</span></>
+                    ) : (
+                      <><XCircle className="w-3 h-3" /> <span>Passwords do not match (invalid)</span></>
+                    ) }
+                  </div>
+                ) }
               </div>
 
               {/* Preferences */ }
@@ -242,17 +292,24 @@ const Register = () =>
                 </div>
               </div>
 
-              <button
-                type="submit"
-                disabled={ loading }
-                className="w-full bg-[#17A2B8] text-white py-3 rounded-lg font-semibold hover:bg-[#138496] transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed mt-6"
-              >
-                { loading ? (
-                  <LoadingSpinner size="sm" />
-                ) : (
-                  'Create Account'
+              <div className="flex flex-col space-y-2">
+                <button
+                  type="submit"
+                  disabled={ loading || !isPasswordStrong || !passwordsMatch }
+                  className="w-full bg-[#17A2B8] text-white py-3 rounded-lg font-semibold hover:bg-[#138496] transition-all flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed mt-4"
+                >
+                  { loading ? (
+                    <LoadingSpinner size="sm" />
+                  ) : (
+                    'Create Account'
+                  ) }
+                </button>
+                { !loading && touched && ( !isPasswordStrong || !passwordsMatch ) && (
+                  <p className="text-xs text-red-500 text-center font-medium">
+                    Please create a strong password and ensure they match
+                  </p>
                 ) }
-              </button>
+              </div>
             </form>
           </AnimatedSection>
 

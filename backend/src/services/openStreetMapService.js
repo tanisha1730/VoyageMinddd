@@ -5,7 +5,7 @@ class OpenStreetMapService {
   constructor() {
     this.nominatimUrl = 'https://nominatim.openstreetmap.org';
     this.overpassUrl = 'https://overpass-api.de/api/interpreter';
-    this.userAgent = 'AI-Travel-Planner/1.0';
+    this.userAgent = 'VoyageMind/1.0 (contact@voyagemind.com)';
     this.lastRequestTime = 0;
     this.minRequestInterval = 1000; // 1 second between requests (OSM requirement)
   }

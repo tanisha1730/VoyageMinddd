@@ -52,6 +52,9 @@ class WikidataPlacesService {
           language: 'en',
           format: 'json',
           limit: 1
+        },
+        headers: {
+          'User-Agent': 'VoyageMind/1.0 (contact@voyagemind.com)'
         }
       });
 
@@ -136,7 +139,7 @@ class WikidataPlacesService {
           format: 'json'
         },
         headers: {
-          'User-Agent': 'AI-Travel-Planner/1.0',
+          'User-Agent': 'VoyageMind/1.0 (contact@voyagemind.com)',
           'Accept': 'application/json'
         },
         timeout: 30000 // 30 second timeout for Wikidata

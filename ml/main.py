@@ -180,6 +180,12 @@ class CaptionRequest(BaseModel):
 class CaptionResponse(BaseModel):
     caption: str
 
+class TextRequest(BaseModel):
+    prompt: str
+
+class TextResponse(BaseModel):
+    text: str
+
 @app.get("/")
 async def root():
     return {"message": "AI Travel Planner ML Service - Real-time, no database"}
@@ -427,6 +433,16 @@ async def generate_caption(request: CaptionRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/generate-text", response_model=TextResponse)
+async def generate_text(request: TextRequest):
+    """Generate dynamic travel stories based on prompt details"""
+    try:
+        prompt = request.prompt
+        story = generate_dynamic_story(prompt)
+        return TextResponse(text=story)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 # Helper functions
 def extract_destination(text: str) -> str:
     """Extract destination from text using patterns and NER"""
@@ -565,6 +581,84 @@ def calculate_recommendation_scores(candidates: List[Dict], user_interests: List
         scores.append(min(1.0, max(0.0, final_score)))  # Clamp to 0-1
     
     return scores
+
+def generate_dynamic_story(prompt: str) -> str:
+    """Generate a dynamic, personalized travel story based on prompt components"""
+    text = prompt.lower()
+    
+    # Extract components from prompt using regex
+    title_match = re.search(r"trip:\s*(.+?)(?:\n|$)", text)
+    highlight_match = re.search(r"highlight:\s*(.+?)(?:\n|$)", text)
+    style_match = re.search(r"style:\s*(.+?)(?:\n|$)", text)
+    location_match = re.search(r"when & where:\s*(.+?)(?:\n|$)", text)
+    
+    title = title_match.group(1).strip().title() if title_match else "The Journey"
+    highlight = highlight_match.group(1).strip() if highlight_match else "every moment was a discovery"
+    style = style_match.group(1).strip() if style_match else "nostalgic"
+    location = location_match.group(1).strip() if location_match else ""
+    
+    # Pools of thematic sentences
+    intros = [
+        f"Our time in {title} was more than just a destination; it was a feeling that settled deep in the soul.",
+        f"They say some places change you, and {title} certainly left its mark on us.",
+        f"The spirit of {title} greeted us with open arms, promising adventures we'd never forget.",
+        f"Wandering through {title}, we found ourselves lost in a world where time seemed to stand still.",
+        f"Every corner of {title} told a different story, but none as beautiful as ours."
+    ]
+    
+    sensory_details = [
+        "The air carried a sweet hint of local spices and the distant murmur of the city.",
+        "Golden light spilled across the ancient stones, casting long shadows of wonder.",
+        "We could hear the rhythmic pulse of life in every bustling street and quiet alleyway.",
+        "The scent of fresh rain on warm pavement mixed with the salty tang of the breeze.",
+        "A symphony of colors painted the horizon, shifting from deep amber to a bruised violet."
+    ]
+    
+    transitions = [
+        "Everything shifted the moment we experienced it.",
+        "The true magic happened when we least expected it.",
+        "In the middle of our wandering, one moment stood out above the rest.",
+        "Nothing could have prepared us for the raw beauty of that experience.",
+        "It was a day defined by a single, breathtaking realization."
+    ]
+    
+    highlights_intro = [
+        f"I'll never forget the way {highlight.lower()}.",
+        f"The highlight of our trip was undoubtedly when {highlight.lower()}.",
+        f"Looking back, the most vivid memory is of {highlight.lower()}.",
+        f"It was {highlight.lower()} that finally made it all feel real.",
+        f"Our hearts skipped a beat as {highlight.lower()}."
+    ]
+    
+    conclusions = [
+        f"It wasn't just about the sights; it was about the way {title} made us feel.",
+        f"As we left, we carried a piece of {title} back home with us in our memories.",
+        f"Some memories are etched in light, and this trip to {title} is one of them.",
+        f"It was the kind of journey that stays with you long after the bags are unpacked.",
+        "A collection of beautiful moments, woven together into a story we'll tell forever."
+    ]
+    
+    # Select randomized components
+    import random
+    
+    # Seed with the title to ensure consistency for the same trip but variety between trips
+    random.seed(title + highlight)
+    
+    intro = random.choice(intros)
+    sensory = random.choice(sensory_details)
+    transition = random.choice(transitions)
+    h_intro = random.choice(highlights_intro)
+    conclusion = random.choice(conclusions)
+    
+    # Vary the structure based on style
+    if "soft" in style or "nostalgic" in style:
+        story = f"{intro} {sensory} {h_intro} {transition} {conclusion}"
+    elif "lively" in style or "energetic" in style:
+        story = f"{title} was an explosion of life! {sensory} {h_intro} {transition} What an incredible adventure. {conclusion}"
+    else:
+        story = f"{intro} {h_intro} {sensory} {transition} {conclusion}"
+        
+    return story
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

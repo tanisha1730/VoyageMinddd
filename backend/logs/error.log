@@ -986,3 +986,208 @@
 {"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:28.174Z"}
 {"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.621Z"}
 {"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:10:37.682Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:54:42.484Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:54:49.046Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:55:05.073Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:55:05.158Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:03:07.919Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:04:50.258Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:05:09.047Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:06:40.901Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:06:40.903Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:08:00.369Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:08:00.376Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:10:02.526Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:11:08.487Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:11:08.489Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:11:24.519Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:11:24.661Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:27:28.403Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:28:06.359Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:28:06.360Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:28:22.378Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:28:22.436Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:32:13.057Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:33:12.529Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:33:12.530Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:33:18.829Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:33:18.886Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:34:37.848Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:35:14.371Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:35:14.372Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:35:22.524Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:35:22.579Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:43:08.623Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:43:45.448Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:43:45.449Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:43:51.891Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:43:51.947Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:29:42.522Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:30:31.517Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:30:31.518Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:30:47.552Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:30:47.598Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:42:49.107Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:42:49.177Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:42:49.201Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:42:51.457Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:42:51.477Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:42:51.486Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:43:00.400Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:00.423Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:00.431Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:43:02.520Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:02.531Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:02.532Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:43:03.600Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:03.605Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:43:03.608Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:44:24.799Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:24.808Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:24.812Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:44:25.864Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:25.867Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:25.869Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:44:48.609Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:48.611Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:48.612Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:44:49.679Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:49.682Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:49.686Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:44:50.419Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:50.421Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:44:50.422Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:45:03.252Z"}
+{"level":"error","message":"❌ Real-time itinerary generation failed: Cannot access 'currencyService' before initialization","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:45:03.254Z"}
+{"ip":"::1","level":"error","message":"Error: Cannot access 'currencyService' before initialization","method":"POST","service":"ai-travel-planner-backend","stack":"ReferenceError: Cannot access 'currencyService' before initialization\n    at C:\\Users\\TANISHA  BHALGAMIA\\OneDrive\\Desktop\\fnal_project\\backend\\src\\routes\\realtime.js:117:24\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-21T06:45:03.254Z","url":"/realtime/generate-itinerary","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:47:55.272Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:48:45.485Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:48:45.487Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:49:01.538Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T06:49:01.734Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:00:31.540Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:01:21.249Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:01:21.252Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:01:37.326Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:01:37.567Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:10:50.028Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:11:41.546Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:11:41.547Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:11:57.567Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:11:57.629Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:22:01.872Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:22:57.346Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:22:57.371Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:23:13.527Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:23:13.715Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:23:28.899Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:24:28.157Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:24:28.159Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:24:44.187Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T07:24:44.294Z"}
+{"level":"error","message":"❌ Text generation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:07:50.233Z"}
+{"level":"error","message":"❌ Text generation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:51:01.287Z"}
+{"level":"error","message":"❌ Text generation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:57:15.845Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:04:57.735Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:05:53.337Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:05:53.339Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.361Z"}
+{"level":"error","message":"Failed to upsert place Artizon Museum:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.472Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.485Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.748Z"}
+{"level":"error","message":"Failed to upsert place Kuramae Water Museum:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.774Z"}
+{"level":"error","message":"Failed to upsert place The Imperial Hotel Plaza:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.798Z"}
+{"level":"error","message":"Failed to upsert place Denny's:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.822Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.844Z"}
+{"level":"error","message":"Failed to upsert place Congee Kiki:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.859Z"}
+{"level":"error","message":"Failed to upsert place Lumba Mia:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.873Z"}
+{"level":"error","message":"Failed to upsert place Hendrix Curry Bar:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.887Z"}
+{"level":"error","message":"Failed to upsert place Esaki:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.901Z"}
+{"level":"error","message":"Failed to upsert place Siddique:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.914Z"}
+{"level":"error","message":"Failed to upsert place EXELCIOR:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.927Z"}
+{"level":"error","message":"Failed to upsert place Japan Football Museum:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.941Z"}
+{"level":"error","message":"Failed to upsert place Royal Host:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.954Z"}
+{"level":"error","message":"Failed to upsert place Masudaya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.966Z"}
+{"level":"error","message":"Failed to upsert place Drop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.980Z"}
+{"level":"error","message":"Failed to upsert place Le moccot:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:00.991Z"}
+{"level":"error","message":"Failed to upsert place MATOI:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.003Z"}
+{"level":"error","message":"Failed to upsert place ALBERATA:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.016Z"}
+{"level":"error","message":"Failed to upsert place Aflo french dining Tribes:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.027Z"}
+{"level":"error","message":"Failed to upsert place Ishikawa:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.039Z"}
+{"level":"error","message":"Failed to upsert place attic room YASUKUNI-GAIEN/cafe&dining:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.050Z"}
+{"level":"error","message":"Failed to upsert place The Ueno Royal Museum:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.063Z"}
+{"level":"error","message":"Failed to upsert place Matsumotoro:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.076Z"}
+{"level":"error","message":"Failed to upsert place Samosa:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.089Z"}
+{"level":"error","message":"Failed to upsert place Sanukiudon Nenotsu:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.101Z"}
+{"level":"error","message":"Failed to upsert place Imojin:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.112Z"}
+{"level":"error","message":"Failed to upsert place Ringoya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.128Z"}
+{"level":"error","message":"Failed to upsert place NaCaSa:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.139Z"}
+{"level":"error","message":"Failed to upsert place Gallery TEN:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.151Z"}
+{"level":"error","message":"Failed to upsert place Couzt Cafe:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.165Z"}
+{"level":"error","message":"Failed to upsert place Cafe Hatopoppo:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.181Z"}
+{"level":"error","message":"Failed to upsert place CAFE VELOCE:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.194Z"}
+{"level":"error","message":"Failed to upsert place Kohikan:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.208Z"}
+{"level":"error","message":"Failed to upsert place A&A Vectorworks Cafe Japan:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.221Z"}
+{"level":"error","message":"Failed to upsert place Ringer Hut:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.233Z"}
+{"level":"error","message":"Failed to upsert place CAFE VELOCE:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.244Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.259Z"}
+{"level":"error","message":"Failed to upsert place Cafe FIRST:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.272Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.286Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.299Z"}
+{"level":"error","message":"Failed to upsert place Kiha:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.311Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.326Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.338Z"}
+{"level":"error","message":"Failed to upsert place Masudaya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.350Z"}
+{"level":"error","message":"Failed to upsert place Kanda Yabu Soba:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.363Z"}
+{"level":"error","message":"Failed to upsert place Gusto:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.375Z"}
+{"level":"error","message":"Failed to upsert place Canal Cafe:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.386Z"}
+{"level":"error","message":"Failed to upsert place EXCELSIOR CAFE:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.398Z"}
+{"level":"error","message":"Failed to upsert place Blondie:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.409Z"}
+{"level":"error","message":"Failed to upsert place Kaien:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.421Z"}
+{"level":"error","message":"Failed to upsert place Murasakiyama:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.435Z"}
+{"level":"error","message":"Failed to upsert place Fanfaranna:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.449Z"}
+{"level":"error","message":"Failed to upsert place Shanghai Tei:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.463Z"}
+{"level":"error","message":"Failed to upsert place Toshomen:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.476Z"}
+{"level":"error","message":"Failed to upsert place Edo-Style Sushi:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.489Z"}
+{"level":"error","message":"Failed to upsert place Ryoka:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.500Z"}
+{"level":"error","message":"Failed to upsert place Tokyo Chubo:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.513Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.526Z"}
+{"level":"error","message":"Failed to upsert place Hinkatei:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.537Z"}
+{"level":"error","message":"Failed to upsert place Old Shimbashi Station Railway History Exhibition Hall:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.551Z"}
+{"level":"error","message":"Failed to upsert place Goemon:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.564Z"}
+{"level":"error","message":"Failed to upsert place Taizo:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.575Z"}
+{"level":"error","message":"Failed to upsert place Kimura Sushi:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.601Z"}
+{"level":"error","message":"Failed to upsert place Unicorn:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.614Z"}
+{"level":"error","message":"Failed to upsert place Osakana Shokudo:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.628Z"}
+{"level":"error","message":"Failed to upsert place Genpin Fugu:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.641Z"}
+{"level":"error","message":"Failed to upsert place Shima Furin:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.651Z"}
+{"level":"error","message":"Failed to upsert place Dairen:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.665Z"}
+{"level":"error","message":"Failed to upsert place Yabusame:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.677Z"}
+{"level":"error","message":"Failed to upsert place Yuasa:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.688Z"}
+{"level":"error","message":"Failed to upsert place Hibiya Bar:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.703Z"}
+{"level":"error","message":"Failed to upsert place Ootoya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.716Z"}
+{"level":"error","message":"Failed to upsert place Ryumon:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.727Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.740Z"}
+{"level":"error","message":"Failed to upsert place Starbucks:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.754Z"}
+{"level":"error","message":"Failed to upsert place Tokyo City View:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.766Z"}
+{"level":"error","message":"Failed to upsert place Royal Host:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.775Z"}
+{"level":"error","message":"Failed to upsert place Renoir:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.786Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.800Z"}
+{"level":"error","message":"Failed to upsert place CoCo ICHIBANYA:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.811Z"}
+{"level":"error","message":"Failed to upsert place Beef Okuma:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.823Z"}
+{"level":"error","message":"Failed to upsert place Ikoi:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.835Z"}
+{"level":"error","message":"Failed to upsert place Cafe Kariz:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.849Z"}
+{"level":"error","message":"Failed to upsert place Shuzukan:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.860Z"}
+{"level":"error","message":"Failed to upsert place Sushi Izu:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.871Z"}
+{"level":"error","message":"Failed to upsert place Uchida:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.884Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.900Z"}
+{"level":"error","message":"Failed to upsert place Sakura:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.914Z"}
+{"level":"error","message":"Failed to upsert place Kurumi:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.929Z"}
+{"level":"error","message":"Failed to upsert place CAFE VELOCE:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.942Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.953Z"}
+{"level":"error","message":"Failed to upsert place Doutor Coffee Shop:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.967Z"}
+{"level":"error","message":"Failed to upsert place Cafe Masters:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.979Z"}
+{"level":"error","message":"Failed to upsert place Cherbourg:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:01.990Z"}
+{"level":"error","message":"Failed to upsert place T&M:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.003Z"}
+{"level":"error","message":"Failed to upsert place Yayoiken:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.015Z"}
+{"level":"error","message":"Failed to upsert place Soba Koshuya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.026Z"}

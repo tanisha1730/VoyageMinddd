@@ -467,6 +467,160 @@ const realPlacesDatabase = {
       tags: ['shopping', 'famous', 'avenue', 'luxury'],
       description: 'Famous avenue known for shopping, cafes, and the Arc de Triomphe.',
       address: 'Champs-Élysées, 75008 Paris, France'
+    },
+    {
+      place_id: 'arc_de_triomphe_paris',
+      name: 'Arc de Triomphe',
+      category: ['landmark', 'monument'],
+      location: { lat: 48.8738, lng: 2.2950 },
+      rating: 4.7,
+      entry_fee: 13,
+      tags: ['monument', 'viewpoint', 'history', 'napoleon'],
+      description: 'Iconic triumphal arch honoring those who fought for France, offering great city views from the top.',
+      address: 'Pl. Charles de Gaulle, 75008 Paris, France'
+    },
+    {
+      place_id: 'sacre_coeur_paris',
+      name: 'Sacré-Cœur Basilica',
+      category: ['church', 'landmark'],
+      location: { lat: 48.8867, lng: 2.3431 },
+      rating: 4.6,
+      entry_fee: 0,
+      tags: ['church', 'viewpoint', 'montmartre', 'beautiful'],
+      description: 'White-domed basilica at the highest point of the city, located in the charming Montmartre district.',
+      address: '35 Rue du Chevalier de la Barre, 75018 Paris, France'
+    },
+    {
+      place_id: 'musee_d_orsay_paris',
+      name: 'Musée d\'Orsay',
+      category: ['museum', 'art_gallery'],
+      location: { lat: 48.8599, lng: 2.3265 },
+      rating: 4.8,
+      entry_fee: 16,
+      tags: ['museum', 'art', 'impressionism', 'culture'],
+      description: 'Museum housed in a former railway station, holding the world\'s largest collection of impressionist masterpieces.',
+      address: '1 Rue de la Légion d\'Honneur, 75007 Paris, France'
+    },
+    {
+      place_id: 'sainte_chapelle_paris',
+      name: 'Sainte-Chapelle',
+      category: ['church', 'historical_site'],
+      location: { lat: 48.8554, lng: 2.3450 },
+      rating: 4.8,
+      entry_fee: 11,
+      tags: ['church', 'stained_glass', 'gothic', 'history'],
+      description: 'A royal chapel featuring some of the most spectacular stained glass windows in the world.',
+      address: '10 Bd du Palais, 75001 Paris, France'
+    },
+    {
+      place_id: 'pantheon_paris',
+      name: 'Panthéon',
+      category: ['monument', 'historical_site'],
+      location: { lat: 48.8462, lng: 2.3464 },
+      rating: 4.6,
+      entry_fee: 11,
+      tags: ['monument', 'history', 'latin_quarter', 'architecture'],
+      description: 'A mausoleum containing the remains of distinguished French citizens like Voltaire and Marie Curie.',
+      address: 'Pl. du Panthéon, 75005 Paris, France'
+    },
+    {
+      place_id: 'luxembourg_gardens_paris',
+      name: 'Luxembourg Gardens',
+      category: ['park', 'garden'],
+      location: { lat: 48.8462, lng: 2.3371 },
+      rating: 4.7,
+      entry_fee: 0,
+      tags: ['park', 'nature', 'relaxing', 'beautiful'],
+      description: 'Beautiful 17th-century park with formal gardens, statues, tree-lined promenades and the Medici Fountain.',
+      address: '75006 Paris, France'
+    },
+    {
+      place_id: 'palais_garnier_paris',
+      name: 'Palais Garnier',
+      category: ['opera_house', 'tourist_attraction'],
+      location: { lat: 48.8719, lng: 2.3316 },
+      rating: 4.8,
+      entry_fee: 14,
+      tags: ['opera', 'architecture', 'opulent', 'culture'],
+      description: 'A breathtakingly opulent 19th-century opera house, famous as the setting of The Phantom of the Opera.',
+      address: 'Pl. de l\'Opéra, 75009 Paris, France'
+    },
+    {
+      place_id: 'le_marais_paris',
+      name: 'Le Marais',
+      category: ['neighborhood', 'historic'],
+      location: { lat: 48.8576, lng: 2.3598 },
+      rating: 4.6,
+      entry_fee: 0,
+      tags: ['neighborhood', 'historic', 'shopping', 'cafes'],
+      description: 'Historic district known for its medieval streets, trendy boutiques, and vibrant café culture.',
+      address: 'Le Marais, Paris, France'
+    },
+    {
+      place_id: 'moulin_rouge_paris',
+      name: 'Moulin Rouge',
+      category: ['entertainment', 'tourist_attraction'],
+      location: { lat: 48.8841, lng: 2.3322 },
+      rating: 4.4,
+      entry_fee: 115,
+      tags: ['cabaret', 'show', 'nightlife', 'famous'],
+      description: 'World-famous cabaret featuring spectacular shows with dancers, original music, and the iconic French Cancan.',
+      address: '82 Bd de Clichy, 75018 Paris, France'
+    },
+    {
+      place_id: 'centre_pompidou_paris',
+      name: 'Centre Pompidou',
+      category: ['museum', 'art_gallery'],
+      location: { lat: 48.8606, lng: 2.3522 },
+      rating: 4.5,
+      entry_fee: 15,
+      tags: ['museum', 'modern_art', 'architecture', 'culture'],
+      description: 'High-tech architectural marvel housing the largest museum for modern art in Europe.',
+      address: 'Place Georges-Pompidou, 75004 Paris, France'
+    },
+    {
+      place_id: 'galleries_lafayette_paris',
+      name: 'Galeries Lafayette Haussmann',
+      category: ['shopping_mall', 'landmark'],
+      location: { lat: 48.8732, lng: 2.3323 },
+      rating: 4.5,
+      entry_fee: 0,
+      tags: ['shopping', 'luxury', 'architecture', 'dome'],
+      description: 'Upscale French department store famous for its stunning stained-glass dome and panoramic rooftop terrace.',
+      address: '40 Bd Haussmann, 75009 Paris, France'
+    },
+    {
+      place_id: 'cafe_de_flore_paris',
+      name: 'Café de Flore',
+      category: ['cafe', 'restaurant'],
+      location: { lat: 48.8541, lng: 2.3326 },
+      rating: 4.1,
+      entry_fee: 5,
+      tags: ['cafe', 'historic', 'famous', 'breakfast'],
+      description: 'One of the oldest coffeehouses in Paris, famously frequented by writers, philosophers, and artists.',
+      address: '172 Bd Saint-Germain, 75006 Paris, France'
+    },
+    {
+      place_id: 'les_invalides_paris',
+      name: 'Hôtel des Invalides',
+      category: ['museum', 'historical_site'],
+      location: { lat: 48.8550, lng: 2.3126 },
+      rating: 4.6,
+      entry_fee: 14,
+      tags: ['museum', 'history', 'military', 'napoleon'],
+      description: 'Historic complex housing museums relating to the military history of France and the tomb of Napoleon.',
+      address: '129 Rue de Grenelle, 75007 Paris, France'
+    },
+    {
+      place_id: 'versailles_palace_paris',
+      name: 'Palace of Versailles',
+      category: ['palace', 'historical_site'],
+      location: { lat: 48.8048, lng: 2.1203 },
+      rating: 4.7,
+      entry_fee: 20,
+      tags: ['palace', 'royal', 'gardens', 'history'],
+      description: 'Opulent former royal residence known for the Hall of Mirrors and vast, magnificent gardens.',
+      address: 'Place d\'Armes, 78000 Versailles, France'
     }
   ],
 

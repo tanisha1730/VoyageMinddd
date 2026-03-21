@@ -54,12 +54,10 @@ const Layout = ( { children } ) =>
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
         <nav className="mx-auto max-w-7xl px-8 lg:px-12">
           <div className="flex h-24 items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-              <Link to="/" className="text-base font-semibold text-gray-900">
-                voyagemind
-              </Link>
-            </div>
+            <Link to="/" className="flex items-center space-x-2">
+              <Compass className="w-8 h-8 text-gray-900" />
+              <span className="text-2xl font-bold text-gray-900 tracking-tight">VoyageMind</span>
+            </Link>
             <div className="hidden md:flex items-center space-x-12">
               { topNavigation.map( ( item ) => (
                 <Link
@@ -170,8 +168,8 @@ const Layout = ( { children } ) =>
         <div className="mx-auto max-w-7xl px-8 lg:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-              <span className="text-xl font-bold text-gray-900">voyageMind</span>
+              <Compass className="w-6 h-6 text-gray-900" />
+              <span className="text-xl font-bold text-gray-900">VoyageMind</span>
             </div>
             <div className="flex items-center space-x-8 text-sm text-gray-600">
               <Link to="/about" className="hover:text-gray-900">About</Link>
@@ -190,7 +188,7 @@ const Layout = ( { children } ) =>
             </div>
           </div>
           <div className="mt-8 text-center text-sm text-gray-500">
-            © 2025 voyageMind. All rights reserved.
+            © 2025 VoyageMind. All rights reserved.
           </div>
         </div>
       </footer>

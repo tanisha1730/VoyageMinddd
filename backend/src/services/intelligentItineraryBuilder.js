@@ -1,5 +1,6 @@
 const logger = require( '../utils/logger' ); // Import the logger utility for logging messages
 
+
 class IntelligentItineraryBuilder
 {
 
@@ -13,7 +14,7 @@ class IntelligentItineraryBuilder
    * @param {number} placesPerDay - flexible limit for places per day (default 7).
    * @returns {Array} - The generated itinerary (array of day objects).
    */
-  buildItinerary ( destination, days, budget, interests, allPlaces, placesPerDay = 7 )
+  buildItinerary ( destination, days, budget, interests, allPlaces, placesPerDay = 7, localCurrency = null )
   {
     // Log the start of the itinerary building process with key parameters
     logger.info( `🎯 Building ${ days }-day itinerary for ${ destination }` );
@@ -44,10 +45,13 @@ class IntelligentItineraryBuilder
     // Categorize places into buckets like nature, shopping, restaurants etc.
     const categorized = this.categorizePlaces( allPlaces );
 
-    // Calculate the daily budget allocation
+    // Detect local currency if not provided
+    const currencyService = require( './currencyService' );
+    const effectiveCurrency = localCurrency || currencyService.getLocalCurrency( destination );
+    // Calculate daily budget in local currency
     const dailyBudget = Math.floor( budget / days );
-    // Determine the budget level (low, medium, high) based on daily amount
-    const budgetLevel = this.getBudgetLevel( dailyBudget );
+    // Determine the budget level (low, medium, high) using locale-aware thresholds
+    const budgetLevel = currencyService.getBudgetLevel( dailyBudget, effectiveCurrency );
 
     // PRIORITIZE activities based on user interests
     // Initialize an empty array to hold the prioritized list of activities
@@ -166,7 +170,7 @@ class IntelligentItineraryBuilder
       const dayData = this.buildDay(
         day, destination, dailyBudget, budgetLevel,
         uniqueActivities, uniqueRestaurants,
-        usedPlaceIds, usedNames, day === 1, day === days, placesPerDay
+        usedPlaceIds, usedNames, day === 1, day === days, placesPerDay, effectiveCurrency
       );
 
       // Log the summary for the built day
@@ -217,7 +221,7 @@ class IntelligentItineraryBuilder
 
   // detailed logic to build a single day's itinerary
   buildDay ( day, destination, dailyBudget, budgetLevel, activities, restaurants,
-    usedPlaceIds, usedNames, isFirst, isLast, placesPerDay )
+    usedPlaceIds, usedNames, isFirst, isLast, placesPerDay, localCurrency = 'USD' )
   {
 
     // Initialize array to hold the ordered places for the day
@@ -226,13 +230,14 @@ class IntelligentItineraryBuilder
     let totalCost = 0;
     // Initialize current time pointer (start at 6 AM)
     let currentTime = '06:00';
+    // Clear the daily names tracker so variations can be reused on new days
+    global.usedNamesThisDay = new Set();
 
-    // Define meal costs based on the calculated budget level
-    const meals = {
-      low: { breakfast: 12, lunch: 20, dinner: 30 },
-      medium: { breakfast: 20, lunch: 35, dinner: 70 },
-      high: { breakfast: 35, lunch: 55, dinner: 150 }
-    }[ budgetLevel ];
+    // Use REALISTIC LOCAL meal costs (INR for India, EUR for Europe, etc.)
+    const currencyService = require( './currencyService' );
+    const meals = currencyService.getLocalMealPrices( destination, budgetLevel );
+    // Currency symbol for display
+    const currSymbol = currencyService.getSymbol( localCurrency );
 
     // Track places used in THIS day to prevent duplicate visits in the same day (redundant with global set but good for safety)
     const usedInThisDay = new Set();
@@ -291,60 +296,84 @@ class IntelligentItineraryBuilder
     // Helper to get a unique activity from the pool
     const getActivity = () =>
     {
-      // Iterate through available activities to find an unused one
-      // First try to get unused place (never used before in ANY day)
+      // First pass: Try to find a completely unique place (never used before globally by ID or Name)
       for ( let i = 0; i < activities.length; i++ )
       {
         const place = activities[ i ];
-        // Normalize name for string comparison
         const normalizedName = ( place.name || '' ).toLowerCase().trim();
 
-        // Check against global used sets
         if ( !usedPlaceIds.has( place.place_id ) && !usedNames.has( normalizedName ) )
         {
-          // Mark as used
           usedPlaceIds.add( place.place_id );
           usedInThisDay.add( place.place_id );
           usedNames.add( normalizedName );
-          // Log selection
+          if ( !global.usedNamesThisDay ) global.usedNamesThisDay = new Set();
+          global.usedNamesThisDay.add( normalizedName ); 
           logger.info( `✅ Selected NEW activity: ${ place.name }` );
-          // Return a shallow copy to avoid mutating original source array deeply
           return { ...place };
         }
       }
 
-      // If we reach here, we've run out of unique places!
-      logger.warn( `⚠️ WARNING: Ran out of unique activities!` );
+      // Second pass: Priority to variations if unique ones are exhausted
+      for ( let i = 0; i < activities.length; i++ )
+      {
+        const place = activities[ i ];
+        const normalizedName = ( place.name || '' ).toLowerCase().trim();
+        if ( !global.usedNamesThisDay ) global.usedNamesThisDay = new Set();
+        
+        // Prevent using the same specific variation ID globally, and never reuse the same name on the SAME DAY
+        if ( !usedPlaceIds.has( place.place_id ) && !global.usedNamesThisDay.has( normalizedName ) )
+        {
+          usedPlaceIds.add( place.place_id );
+          usedInThisDay.add( place.place_id );
+          global.usedNamesThisDay.add( normalizedName );
+          logger.info( `⚠️ Selected VARIATION activity: ${ place.name }` );
+          return { ...place };
+        }
+      }
 
-      // Return null, indicating failure to find a unique activity
+      logger.warn( `⚠️ WARNING: Ran out of unique activities!` );
       return null;
     };
 
     // Helper to get a unique restaurant from the pool
     const getRestaurant = () =>
     {
-      // Iterate through available restaurants
-      // First try to get unused restaurant (never used before in ANY day)
+      // First pass: Globally unique
       for ( let i = 0; i < restaurants.length; i++ )
       {
         const place = restaurants[ i ];
         const normalizedName = ( place.name || '' ).toLowerCase().trim();
 
-        // Check against global used sets
         if ( !usedPlaceIds.has( place.place_id ) && !usedNames.has( normalizedName ) )
         {
-          // Mark as used
           usedPlaceIds.add( place.place_id );
           usedInThisDay.add( place.place_id );
           usedNames.add( normalizedName );
-          // Log selection
+          if ( !global.usedNamesThisDay ) global.usedNamesThisDay = new Set();
+          global.usedNamesThisDay.add( normalizedName );
           logger.info( `✅ Selected NEW restaurant: ${ place.name }` );
-          return { ...place }; // Return a copy
+          return { ...place };
         }
       }
 
-      // If we run out of unique restaurants, return null (NO fake places)
-      // Users can find their own food if our DB is empty
+      // Second pass: Allowed if not used today
+      for ( let i = 0; i < restaurants.length; i++ )
+      {
+        const place = restaurants[ i ];
+        const normalizedName = ( place.name || '' ).toLowerCase().trim();
+        if ( !global.usedNamesThisDay ) global.usedNamesThisDay = new Set();
+        
+        if ( !usedPlaceIds.has( place.place_id ) && !global.usedNamesThisDay.has( normalizedName ) )
+        {
+          usedPlaceIds.add( place.place_id );
+          usedInThisDay.add( place.place_id );
+          global.usedNamesThisDay.add( normalizedName );
+          logger.info( `⚠️ Selected VARIATION restaurant: ${ place.name }` );
+          return { ...place };
+        }
+      }
+
       return null;
     };
 
@@ -386,7 +415,11 @@ class IntelligentItineraryBuilder
         start_time: currentTime,
         end_time: this.addMinutes( currentTime, 60 ), // 1 hour for breakfast
         activity_type: 'breakfast',
-        entry_fee: meals.breakfast, // Estimated cost
+        entry_fee: meals.breakfast,          // in local currency
+        entry_fee_local: meals.breakfast,
+        entry_fee_formatted: meals.breakfast === 0 ? 'Free' : `${ currSymbol }${ meals.breakfast.toLocaleString() }`,
+        currency: localCurrency,
+        currency_symbol: currSymbol,
         description: enrichedBreakfast.description || `Breakfast at ${ enrichedBreakfast.name }`
       };
       places.push( breakfastPlace );
@@ -425,7 +458,11 @@ class IntelligentItineraryBuilder
         start_time: currentTime,
         end_time: this.addMinutes( currentTime, 90 ), // 1.5 hours for lunch
         activity_type: 'lunch',
-        entry_fee: meals.lunch,
+        entry_fee: meals.lunch,              // in local currency
+        entry_fee_local: meals.lunch,
+        entry_fee_formatted: meals.lunch === 0 ? 'Free' : `${ currSymbol }${ meals.lunch.toLocaleString() }`,
+        currency: localCurrency,
+        currency_symbol: currSymbol,
         description: enrichedLunch.description || `Lunch at ${ enrichedLunch.name }`
       };
       places.push( lunchPlace );
@@ -502,7 +539,11 @@ class IntelligentItineraryBuilder
         start_time: currentTime,
         end_time: this.addMinutes( currentTime, 90 ), // 1.5 hours for dinner
         activity_type: 'dinner',
-        entry_fee: meals.dinner,
+        entry_fee: meals.dinner,             // in local currency
+        entry_fee_local: meals.dinner,
+        entry_fee_formatted: meals.dinner === 0 ? 'Free' : `${ currSymbol }${ meals.dinner.toLocaleString() }`,
+        currency: localCurrency,
+        currency_symbol: currSymbol,
         description: enrichedDinner.description || `Dinner at ${ enrichedDinner.name }`
       };
       places.push( dinnerPlace );
@@ -643,12 +684,11 @@ class IntelligentItineraryBuilder
     }
   }
 
-  // Determine budget level string based on daily budget amount
-  getBudgetLevel ( dailyBudget )
+  // Determine budget level — delegated to currencyService for locale-awareness
+  getBudgetLevel ( dailyBudget, localCurrency = 'USD' )
   {
-    if ( dailyBudget < 100 ) return 'low';
-    if ( dailyBudget < 300 ) return 'medium';
-    return 'high';
+    const currencyService = require( './currencyService' );
+    return currencyService.getBudgetLevel( dailyBudget, localCurrency );
   }
 
   // Get a thematic title/description for the day

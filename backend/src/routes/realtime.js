@@ -5,6 +5,7 @@ const { authenticateToken } = require('../middleware/auth');
 const { validateRequest } = require('../middleware/validation');
 const mlService = require('../services/mlService');
 const realDataService = require('../services/realDataService');
+const currencyService = require('../services/currencyService');
 const Itinerary = require('../models/Itinerary');
 const logger = require('../utils/logger');
 
@@ -15,6 +16,7 @@ const generateItinerarySchema = Joi.object({
   query: Joi.string().trim().min(1).max(500).required(),
   preferences: Joi.object({
     budget: Joi.string().valid('low', 'medium', 'high').default('medium'),
+    rawBudget: Joi.string().allow('').optional(), // Raw budget string for currency detection
     interests: Joi.array().items(Joi.string().trim()).default([])
   }).default({})
 });
@@ -108,6 +110,24 @@ router.post('/generate-itinerary', authenticateToken, validateRequest(generateIt
       destination = adjustedDestination; // Update destination variable
     }
     
+    // === SMART BUDGET + CURRENCY HANDLING ===
+    // Parse the user's budget string (could be $5000, ₹50000, 50000INR, or plain 50000)
+    // preferences.rawBudget is the raw string from the form; fall back to NLP-parsed budget
+    const rawBudgetInput = preferences?.rawBudget || budget;
+    const budgetInfo = currencyService.parseBudgetInput(rawBudgetInput, destination);
+    let localCurrency = budgetInfo.localCurrency;
+    let localBudget = budgetInfo.localAmount;
+
+    if (budgetInfo.isConverted) {
+      logger.info(`💱 Budget converted: ${budgetInfo.currency} ${budgetInfo.amount} → ${localCurrency} ${localBudget}`);
+    } else {
+      logger.info(`💰 Budget in local currency (${localCurrency}): ${localBudget}`);
+    }
+
+    // Ensure budget and days are sensible
+    if (!localBudget || localBudget <= 0) localBudget = 50000; // default ₹50,000 for Indian destinations
+    budget = localBudget; // override budget variable with local amount
+
     // Try Google Places API first
     try {
       logger.info(`🌍 Fetching real places from Google Places API for ${destination}`);
@@ -245,7 +265,7 @@ router.post('/generate-itinerary', authenticateToken, validateRequest(generateIt
     });
 
     // Step 9: Create SUPER INTELLIGENT itinerary with GUARANTEED days
-    logger.info(`⚡ Creating SUPER INTELLIGENT itinerary with ${placesPerDay} places per day...`);
+    logger.info(`⚡ Creating SUPER INTELLIGENT itinerary with ${placesPerDay} places per day (currency: ${localCurrency})...`);
     const intelligentItineraryBuilder = require('../services/intelligentItineraryBuilder');
     const detailedPlan = intelligentItineraryBuilder.buildItinerary(
       destination,
@@ -253,7 +273,8 @@ router.post('/generate-itinerary', authenticateToken, validateRequest(generateIt
       budget,
       allInterests,
       realPlaces,
-      placesPerDay // Use extracted places per day from query
+      placesPerDay, // Use extracted places per day from query
+      localCurrency  // Pass detected local currency
     );
     
     logger.info(`✅ Generated INTELLIGENT plan with ${detailedPlan.length} days`);
@@ -280,7 +301,6 @@ router.post('/generate-itinerary', authenticateToken, validateRequest(generateIt
 
     // Step 11.5: Add translations and multi-currency pricing
     logger.info(`🌍 Adding translations and multi-currency pricing...`);
-    const currencyService = require('../services/currencyService');
     const translationService = require('../services/translationService');
     
     enhancedPlan = enhancedPlan.map(day => {

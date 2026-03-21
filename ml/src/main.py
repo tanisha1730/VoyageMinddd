@@ -139,6 +139,29 @@ async def generate_postcard_caption(request: PostcardCaptionRequest, token: str 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Caption generation failed: {str(e)}")
 
+@app.post("/generate-text")
+async def generate_text(request: dict):
+    """Generate dynamic travel stories based on prompt details"""
+    try:
+        prompt = request.get("prompt", "")
+        # Use a simplified version of the dynamic logic here for the internal service
+        import re
+        import random
+        text = prompt.lower()
+        title_match = re.search(r"trip:\s*(.+?)(?:\n|$)", text)
+        highlight_match = re.search(r"highlight:\s*(.+?)(?:\n|$)", text)
+        title = title_match.group(1).strip().title() if title_match else "The Journey"
+        highlight = highlight_match.group(1).strip() if highlight_match else "every moment was a discovery"
+        
+        stories = [
+            f"Our time in {title} was unforgettable. {highlight.capitalize()} was the highlight that made it all feel real. The atmosphere was magical, and we carried those memories home forever.",
+            f"Wandering through {title}, we found beauty in the unexpected. The way {highlight.lower()} really stood out to us. It was a trip of a lifetime.",
+            f"The spirit of {title} was everywhere we looked. I'll never forget how {highlight.lower()}. Cinematic, warm, and simply perfect."
+        ]
+        return {"text": random.choice(stories)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8001)

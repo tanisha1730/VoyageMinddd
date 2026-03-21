@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Sparkles, Play, User, MapPin, Calendar, Camera, Menu, X } from 'lucide-react'
+import { Sparkles, Play, User, MapPin, Calendar, Camera, Menu, X, Compass } from 'lucide-react'
 import LoadingSpinner from '../components/LoadingSpinner'
 import MapComponent from '../components/MapComponent'
 import PageTransition from '../components/PageTransition'
@@ -58,22 +58,23 @@ const Home = () =>
       icon: MapPin,
       title: 'Smart Itineraries',
       description: 'Share your dates, budget, and travel style. Get a complete day-by-day plan tailored to how you like to explore.',
-      badge: 'Adaptive to weather & pace',
-      action: 'View sample'
+      badge: 'Adaptive to weather & pace'
     },
     {
       icon: Calendar,
       title: 'One-click Booking',
       description: 'Connect your favorite providers and book flights, stays, and experiences directly from your itinerary.',
       info: 'Syncs with major providers',
-      action: 'Explore booking'
+      action: 'Explore booking',
+      path: '/booking'
     },
     {
       icon: Camera,
       title: 'Save Your Memories',
       description: 'Turn your photos and notes into beautiful photocards or magazine-style spreads in a couple of clicks.',
       info: 'Polaroid, collage, and more',
-      action: 'Browse memories'
+      action: 'Browse memories',
+      path: '/memories'
     }
   ]
 
@@ -117,12 +118,10 @@ const Home = () =>
         <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
           <nav className="mx-auto max-w-7xl px-8 lg:px-12">
             <div className="flex h-24 items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <Link to="/" className="text-2xl font-bold text-gray-900">
-                  voyagemind
-                </Link>
-              </div>
+              <Link to="/" className="flex items-center space-x-2">
+                <Compass className="w-8 h-8 text-gray-900" />
+                <span className="text-2xl font-bold text-gray-900 tracking-tight">VoyageMind</span>
+              </Link>
 
               {/* Desktop Navigation */ }
               <div className="hidden md:flex items-center space-x-12">
@@ -174,8 +173,8 @@ const Home = () =>
               <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                 <div className="flex items-center justify-between">
                   <Link to="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="text-2xl font-bold text-gray-900">voyagemind</span>
+                    <Compass className="w-8 h-8 text-gray-900" />
+                    <span className="text-2xl font-bold text-gray-900 tracking-tight">VoyageMind</span>
                   </Link>
                   <button
                     type="button"
@@ -244,10 +243,6 @@ const Home = () =>
                       </>
                     ) }
                   </button>
-                  <button className="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
-                    <Play className="w-5 h-5" />
-                    <span>See example trip</span>
-                  </button>
                 </div>
                 <div className="flex items-center space-x-8 text-sm text-gray-600">
                   <div>
@@ -301,12 +296,12 @@ const Home = () =>
         <section className="py-20 bg-white">
           <div className="mx-auto max-w-7xl px-8 lg:px-12">
             <AnimatedSection className="text-center mb-12">
-              <p className="text-sm text-gray-500 mb-2">Why voyageMind</p>
+              <p className="text-sm text-gray-500 mb-2">Why VoyageMind</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Plan, book, and relive every trip
               </h2>
               <p className="text-lg text-gray-600">
-                Three ways voyageMind makes travel easier.
+                Three ways VoyageMind makes travel easier.
               </p>
             </AnimatedSection>
 
@@ -332,9 +327,15 @@ const Home = () =>
                       { feature.info }
                     </div>
                   ) }
-                  <button className="text-teal-600 hover:text-teal-700 font-medium text-sm">
-                    { feature.action } →
-                  </button>
+                  { feature.path ? (
+                    <Link to={ feature.path } className="text-teal-600 hover:text-teal-700 font-medium text-sm">
+                      { feature.action } →
+                    </Link>
+                  ) : feature.action ? (
+                    <button className="text-teal-600 hover:text-teal-700 font-medium text-sm">
+                      { feature.action } →
+                    </button>
+                  ) : null }
                 </AnimatedSection>
               ) ) }
             </div>
@@ -352,14 +353,11 @@ const Home = () =>
                   Tap into ready-made inspiration, then customize it with AI.
                 </p>
               </div>
-              <button className="text-orange-600 hover:text-orange-700 font-medium">
-                View all ideas →
-              </button>
             </AnimatedSection>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               { destinations.map( ( dest, index ) => (
-                <AnimatedSection key={ index } delay={ index * 0.1 } className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer">
+                <AnimatedSection key={ index } delay={ index * 0.1 } className="bg-white rounded-2xl overflow-hidden shadow-sm cursor-default">
                   <img
                     src={ dest.image }
                     alt={ dest.title }
@@ -386,8 +384,8 @@ const Home = () =>
           <div className="mx-auto max-w-7xl px-8 lg:px-12">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <span className="text-xl font-bold text-gray-900">voyageMind</span>
+                <Compass className="w-6 h-6 text-gray-900" />
+                <span className="text-xl font-bold text-gray-900">VoyageMind</span>
               </div>
               <div className="flex items-center space-x-8 text-sm text-gray-600">
                 <Link to="/about" className="hover:text-gray-900">About</Link>
@@ -406,7 +404,7 @@ const Home = () =>
               </div>
             </div>
             <div className="mt-8 text-center text-sm text-gray-500">
-              © 2025 voyageMind. All rights reserved.
+              © 2025 VoyageMind. All rights reserved.
             </div>
           </div>
         </footer>

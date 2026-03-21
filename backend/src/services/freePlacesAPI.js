@@ -72,7 +72,7 @@ class FreePlacesAPI
         {
           headers: {
             'Content-Type': 'text/plain',
-            'User-Agent': 'AI-Travel-Planner/1.0'
+            'User-Agent': 'VoyageMind/1.0 (contact@voyagemind.com)'
           },
           timeout: 60000 // 60 second timeout (increased)
         }
@@ -111,7 +111,7 @@ class FreePlacesAPI
           limit: 1
         },
         headers: {
-          'User-Agent': 'AI-Travel-Planner/1.0'
+          'User-Agent': 'VoyageMind/1.0 (contact@voyagemind.com)'
         },
         timeout: 10000
       } );

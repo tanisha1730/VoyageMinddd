@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Clock, DollarSign } from 'lucide-react';
+import { formatEntryFee, getCurrencyForDestination, getCurrencySymbol } from '../utils/currencyUtils';
 
 const PremiumItineraryView = ({ itinerary }) => {
   const [selectedDay, setSelectedDay] = useState(1);
@@ -75,7 +76,7 @@ const PremiumItineraryView = ({ itinerary }) => {
                 </h2>
                 <div className="text-sm text-gray-600">
                   Day cost: <span className="font-semibold text-gray-900">
-                    ${currentDayPlan.places?.reduce((sum, place) => sum + (place.entry_fee || 0), 0) || 0}
+                    { getCurrencySymbol( getCurrencyForDestination( itinerary?.destination ) ) }{ currentDayPlan.places?.reduce( ( sum, p ) => sum + ( p.entry_fee_local ?? p.entry_fee ?? 0 ), 0 ) || 0 }
                   </span>
                 </div>
               </div>
@@ -125,7 +126,7 @@ const PremiumItineraryView = ({ itinerary }) => {
                     {/* Price Badge */}
                     {place.entry_fee !== undefined && (
                       <span className="px-3 py-1 rounded-full text-xs font-medium bg-white text-gray-800">
-                        {place.entry_fee === 0 ? 'Free' : `$${place.entry_fee}`}
+                        { formatEntryFee( place, itinerary?.destination ) || 'Free' }
                       </span>
                     )}
                   </div>

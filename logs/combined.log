@@ -1,0 +1,16 @@
+{"level":"info","message":"🌍 FREE API: Getting places for Paris...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:59:41.219Z"}
+{"level":"info","message":"📍 Geocoding Paris using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:59:41.223Z"}
+{"level":"info","message":"✅ Coordinates: 48.8588897, 2.320041","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:59:41.410Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:59:41.411Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-03-19T16:59:41.412Z"}
+{"level":"info","message":"✅ Got 100 places from Overpass API (English names only)","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:14.962Z"}
+{"level":"info","message":"✅ Total unique places: 100","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:14.963Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: Paris","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:31.054Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:31.412Z"}
+{"level":"warn","message":"⚠️ Could not find Paris on Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:31.413Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:00:46.491Z"}
+{"level":"error","message":"Wikidata search error:","service":"ai-travel-planner-backend","timestamp":"2026-03-19T17:01:08.266Z"}
+{"level":"info","message":"📝 Generating text from prompt","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:56:31.633Z"}
+{"level":"error","message":"❌ Text generation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:56:31.682Z"}
+{"level":"info","message":"📝 Generating text from prompt","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:56:31.684Z"}
+{"level":"error","message":"❌ Text generation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T13:56:31.690Z"}

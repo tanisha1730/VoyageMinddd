@@ -53,6 +53,12 @@ const itinerarySchema = new mongoose.Schema({
       },
       rating: Number,
       entry_fee: Number,
+      entry_fee_local: Number,
+      entry_fee_formatted: String,
+      currency: String,
+      currency_symbol: String,
+      pricing: mongoose.Schema.Types.Mixed,
+      activity_type: String,
       tags: [String],
       notes: String
     }]
