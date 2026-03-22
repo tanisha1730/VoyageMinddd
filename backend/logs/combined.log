@@ -16445,3 +16445,198 @@
 {"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.913Z"}
 {"level":"info","message":"✅ User profile analyzed: 14 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.958Z"}
 {"level":"info","message":"✅ Generated 6 personalized recommendations (14 trips in history)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:13:53.960Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to Bangkok for 4 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.800Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to Bangkok for 4 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.801Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.819Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.9,"destination":0.8},"days":4,"destination":"Bangkok","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.825Z"}
+{"level":"info","message":"💰 Budget in local currency (THB): 50000","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.828Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.829Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for Bangkok...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.835Z"}
+{"level":"info","message":"📍 Geocoding Bangkok using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.835Z"}
+{"level":"info","message":"✅ Coordinates: 13.7524938, 100.4935089","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:23.536Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:23.537Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:23.537Z"}
+{"level":"warn","message":"⚠️ Overpass API failed: Request failed with status code 504","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:28.294Z"}
+{"level":"info","message":"✅ Total unique places: 0","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:28.295Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:28.296Z"}
+{"level":"info","message":"✅ Found destination: Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:28.896Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.910Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.910Z"}
+{"level":"info","message":"✅ Found 0 REAL places from Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.912Z"}
+{"level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.913Z"}
+{"level":"info","message":"🌍 Fetching real places from OpenStreetMap for: Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.914Z"}
+{"level":"info","message":"🔍 Geocoding location: Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.916Z"}
+{"level":"info","message":"📡 Geocoding response status: 200","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.993Z"}
+{"level":"info","message":"📊 Geocoding results count: 1","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.994Z"}
+{"level":"info","message":"✅ Location found: กรุงเทพมหานคร, ประเทศไทย","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.995Z"}
+{"level":"info","message":"📍 Location found: กรุงเทพมหานคร, ประเทศไทย","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.995Z"}
+{"level":"info","message":"⏳ Waiting 920ms to respect OpenStreetMap rate limit...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.996Z"}
+{"level":"info","message":"🗺️ Fetching places from OpenStreetMap near 13.7524938,100.4935089","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:59.923Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.934Z"}
+{"level":"info","message":"✅ Returning 0 real places from OpenStreetMap","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.935Z"}
+{"level":"info","message":"✅ Found 0 real places from Google API","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.939Z"}
+{"level":"warn","message":"⚠️ Only 0 places from APIs, using comprehensive database as fallback","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.940Z"}
+{"level":"error","message":"❌ No REAL places found for Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.943Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to Delhi for 4 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.136Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to Delhi for 4 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.137Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.143Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.9,"destination":0.8},"days":4,"destination":"Delhi","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.146Z"}
+{"level":"info","message":"💰 Budget in local currency (INR): 50000","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.147Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.147Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for Delhi...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.149Z"}
+{"level":"info","message":"📍 Geocoding Delhi using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.150Z"}
+{"level":"info","message":"✅ Coordinates: 28.6138954, 77.2090057","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.775Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.776Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.776Z"}
+{"level":"info","message":"✅ Got 100 places from Overpass API (English names only)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:59.029Z"}
+{"level":"info","message":"✅ Total unique places: 100","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:59.031Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:59.034Z"}
+{"level":"info","message":"✅ Found destination: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:59.530Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.543Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.544Z"}
+{"level":"info","message":"✅ Found 0 REAL places from Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.545Z"}
+{"level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.545Z"}
+{"level":"info","message":"🌍 Fetching real places from OpenStreetMap for: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.546Z"}
+{"level":"info","message":"🔍 Geocoding location: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.547Z"}
+{"level":"info","message":"📡 Geocoding response status: 200","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.611Z"}
+{"level":"info","message":"📊 Geocoding results count: 1","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.611Z"}
+{"level":"info","message":"✅ Location found: New Delhi, Delhi, India","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.612Z"}
+{"level":"info","message":"📍 Location found: New Delhi, Delhi, India","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.612Z"}
+{"level":"info","message":"⏳ Waiting 934ms to respect OpenStreetMap rate limit...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.613Z"}
+{"level":"info","message":"🗺️ Fetching places from OpenStreetMap near 28.6138954,77.2090057","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:30.549Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.567Z"}
+{"level":"info","message":"✅ Returning 0 real places from OpenStreetMap","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.568Z"}
+{"level":"info","message":"✅ Found 97 real places from Google API","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.573Z"}
+{"level":"info","message":"📋 Initial real places: 97","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.574Z"}
+{"level":"info","message":"✅ Using 97 REAL places only","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.574Z"}
+{"0":"Dandi March Statue (11 Murthi)","1":"Hotel Metropolis","2":"Piccadelhi","3":"Bon Temps Cafe","4":"Internet","level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.575Z"}
+{"level":"info","message":"🎯 Getting PERSONALIZED recommendations from REAL places...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.575Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.576Z"}
+{"level":"info","message":"✅ User profile analyzed: 14 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.642Z"}
+{"level":"info","message":"✨ Personalized 97 places based on your travel history","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.644Z"}
+{"level":"info","message":"🎯 Getting recommendations for Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.645Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.685Z"}
+{"level":"info","message":"🎯 Generated 97 ML recommendations with personalization","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.686Z"}
+{"level":"info","message":"🗓️ Planning 7 places per day for 4 days (total: 28)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.687Z"}
+{"level":"info","message":"📊 Available recommendations: 97","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.687Z"}
+{"level":"info","message":"🎯 Final unique recommendations: 28","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.688Z"}
+{"level":"info","message":"⚡ Creating SUPER INTELLIGENT itinerary with 7 places per day (currency: INR)...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.688Z"}
+{"level":"info","message":"🎯 Building 4-day itinerary for Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.689Z"}
+{"level":"info","message":"📦 Received 97 total places","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.689Z"}
+{"level":"info","message":"📦 Using 97 places for itinerary building","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.689Z"}
+{"level":"info","message":"📊 Categorized: 7 attractions, 85 restaurants, 5 nature, 0 shopping, 0 viewpoints","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.690Z"}
+{"level":"info","message":"📊 Available places: 12 activities, 83 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.692Z"}
+{"level":"info","message":"🎯 Need: 16 activities, 12 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.694Z"}
+{"level":"info","message":"✅ Have: 12 activities, 83 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.694Z"}
+{"level":"warn","message":"⚠️ Insufficient activities! Expanding pool...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.695Z"}
+{"level":"info","message":"🔄 Creating 4 place variations...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.696Z"}
+{"level":"info","message":"✅ Expanded to 16 activities","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.697Z"}
+{"level":"info","message":"📝 Sample activities: Dandi March Statue (11 Murthi), Mirza Ghalib's Tomb, Moluddin Chisti's Grave, Shanker's International Doll Museum, National Children Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.697Z"}
+{"level":"info","message":"📝 Sample restaurants: Hotel Metropolis, Piccadelhi, Bon Temps Cafe, Internet, Bangla Foods","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.698Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Tadka","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.701Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.702Z"}
+{"level":"info","message":"✅ Final: \"Tadka\" → \"Tadka, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.702Z"}
+{"level":"info","message":"✅ Selected NEW activity: Shankar's Doll Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.703Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.704Z"}
+{"level":"info","message":"✅ Final: \"Shankar's Doll Museum\" → \"Shankar's Doll Museum, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.704Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: My Love","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.705Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.705Z"}
+{"level":"info","message":"✅ Final: \"My Love\" → \"My Love, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.706Z"}
+{"level":"info","message":"✅ Selected NEW activity: National Gandhi Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.707Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.708Z"}
+{"level":"info","message":"✅ Final: \"National Gandhi Museum\" → \"National Gandhi Museum, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.708Z"}
+{"level":"info","message":"✅ Selected NEW activity: National Children Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.709Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.709Z"}
+{"level":"info","message":"✅ Final: \"National Children Museum\" → \"National Children Museum, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.710Z"}
+{"level":"info","message":"✅ Selected NEW activity: Haathi Park","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.710Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.710Z"}
+{"level":"info","message":"✅ Final: \"Haathi Park\" → \"Haathi Park, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.711Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Festa Cafe ","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.711Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.712Z"}
+{"level":"info","message":"✅ Final: \"Festa Cafe \" → \"Festa Cafe , Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.712Z"}
+{"level":"info","message":"✅ Day 1: 9 places, Tadka, Delhi, Shankar's Doll Museum, Delhi, My Love, Delhi, National Gandhi Museum, Delhi, National Children Museum, Delhi, 🚇 Metro to Haathi Park, Haathi Park, Delhi, Festa Cafe , Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.713Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Pind Balluchi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.714Z"}
+{"level":"info","message":"✅ Using place.city: New Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.715Z"}
+{"level":"info","message":"✅ Final: \"Pind Balluchi\" → \"Pind Balluchi, New Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.715Z"}
+{"level":"info","message":"✅ Selected NEW activity: Dandi March Statue (11 Murthi)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.716Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.716Z"}
+{"level":"info","message":"✅ Final: \"Dandi March Statue (11 Murthi)\" → \"Dandi March Statue (11 Murthi), Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.717Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Perch - Wine & Coffee Bar","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.717Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.718Z"}
+{"level":"info","message":"✅ Final: \"Perch - Wine & Coffee Bar\" → \"Perch - Wine & Coffee Bar, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.719Z"}
+{"level":"info","message":"✅ Selected NEW activity: Mirza Ghalib's Tomb","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.719Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.720Z"}
+{"level":"info","message":"✅ Final: \"Mirza Ghalib's Tomb\" → \"Mirza Ghalib's Tomb, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.720Z"}
+{"level":"info","message":"✅ Selected NEW activity: Shanker's International Doll Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.720Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.721Z"}
+{"level":"info","message":"✅ Final: \"Shanker's International Doll Museum\" → \"Shanker's International Doll Museum, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.722Z"}
+{"level":"info","message":"✅ Selected NEW activity: Sita Park","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.723Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.723Z"}
+{"level":"info","message":"✅ Final: \"Sita Park\" → \"Sita Park, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.724Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Smokeys","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.725Z"}
+{"level":"info","message":"✅ Extracted from address: New Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.730Z"}
+{"level":"info","message":"✅ Final: \"Smokeys\" → \"Smokeys, New Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.731Z"}
+{"level":"info","message":"✅ Day 2: 9 places, Pind Balluchi, New Delhi, Dandi March Statue (11 Murthi), Delhi, Perch - Wine & Coffee Bar, Delhi, Mirza Ghalib's Tomb, Delhi, Shanker's International Doll Museum, Delhi, 🚇 Metro to Sita Park, Sita Park, Delhi, 🚇 Metro to Smokeys, Smokeys, New Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.732Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Embassy Restaurant ( Samosa)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.733Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.734Z"}
+{"level":"info","message":"✅ Final: \"Embassy Restaurant ( Samosa)\" → \"Embassy Restaurant ( Samosa), Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.734Z"}
+{"level":"info","message":"✅ Selected NEW activity: Moluddin Chisti's Grave","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.735Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.736Z"}
+{"level":"info","message":"✅ Final: \"Moluddin Chisti's Grave\" → \"Moluddin Chisti's Grave, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.736Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Sam's bar","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.737Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.737Z"}
+{"level":"info","message":"✅ Final: \"Sam's bar\" → \"Sam's bar, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.738Z"}
+{"level":"info","message":"✅ Selected NEW activity: R Block Park","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.738Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.739Z"}
+{"level":"info","message":"✅ Final: \"R Block Park\" → \"R Block Park, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.739Z"}
+{"level":"info","message":"✅ Selected NEW activity: Central Park","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.740Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.740Z"}
+{"level":"info","message":"✅ Final: \"Central Park\" → \"Central Park, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.741Z"}
+{"level":"info","message":"✅ Selected NEW activity: Vivekanand Park (Sindi Park)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.741Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.741Z"}
+{"level":"info","message":"✅ Final: \"Vivekanand Park (Sindi Park)\" → \"Vivekanand Park (Sindi Park), Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.742Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Imly","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.742Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.742Z"}
+{"level":"info","message":"✅ Final: \"Imly\" → \"Imly, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.743Z"}
+{"level":"info","message":"✅ Day 3: 7 places, Embassy Restaurant ( Samosa), Delhi, Moluddin Chisti's Grave, Delhi, Sam's bar, Delhi, R Block Park, Delhi, Central Park, Delhi, Vivekanand Park (Sindi Park), Delhi, Imly, Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.743Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Nepali Food","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.744Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.745Z"}
+{"level":"info","message":"✅ Final: \"Nepali Food\" → \"Nepali Food, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.745Z"}
+{"level":"info","message":"⚠️ Selected VARIATION activity: Moluddin Chisti's Grave","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.746Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.746Z"}
+{"level":"info","message":"✅ Final: \"Moluddin Chisti's Grave\" → \"Moluddin Chisti's Grave, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.746Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Internet","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.747Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.748Z"}
+{"level":"info","message":"✅ Final: \"Internet\" → \"Internet, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.748Z"}
+{"level":"info","message":"⚠️ Selected VARIATION activity: Mirza Ghalib's Tomb","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.749Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.749Z"}
+{"level":"info","message":"✅ Final: \"Mirza Ghalib's Tomb\" → \"Mirza Ghalib's Tomb, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.750Z"}
+{"level":"info","message":"⚠️ Selected VARIATION activity: Shanker's International Doll Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.750Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.750Z"}
+{"level":"info","message":"✅ Final: \"Shanker's International Doll Museum\" → \"Shanker's International Doll Museum, Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.751Z"}
+{"level":"info","message":"⚠️ Selected VARIATION activity: Dandi March Statue (11 Murthi)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.751Z"}
+{"level":"info","message":"✅ Using default city: Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.752Z"}
+{"level":"info","message":"✅ Final: \"Dandi March Statue (11 Murthi)\" → \"Dandi March Statue (11 Murthi), Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.752Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Zaffran","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.753Z"}
+{"level":"info","message":"✅ Using place.city: New Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.753Z"}
+{"level":"info","message":"✅ Final: \"Zaffran\" → \"Zaffran, New Delhi\"","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.754Z"}
+{"level":"info","message":"✅ Day 4: 11 places, Nepali Food, Delhi, 🚇 Metro to Moluddin Chisti's Grave, Moluddin Chisti's Grave, Delhi, Internet, Delhi, 🚇 Metro to Mirza Ghalib's Tomb, Mirza Ghalib's Tomb, Delhi, Shanker's International Doll Museum, Delhi, 🚇 Metro to Dandi March Statue (11 Murthi), Dandi March Statue (11 Murthi), Delhi, Zaffran, New Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.754Z"}
+{"level":"info","message":"✅ Generated INTELLIGENT plan with 4 days","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.756Z"}
+{"level":"info","message":"🎯 USING INTELLIGENT BUILDER OUTPUT DIRECTLY!","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.757Z"}
+{"level":"info","message":"✅ Using intelligent builder plan with 4 days (requested: 4)","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.758Z"}
+{"level":"info","message":"🎯 Intelligent builder guaranteed 4 days!","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.759Z"}
+{"level":"info","message":"🌤️ Getting weather forecast...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.760Z"}
+{"level":"info","message":"✅ Using intelligent builder's plan directly - no enhancement needed!","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.763Z"}
+{"level":"info","message":"🌍 Adding translations and multi-currency pricing...","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.763Z"}
+{"entry_fee":600,"level":"info","message":"📝 Sample place after processing:","name":"Tadka","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.788Z"}
+{"level":"info","message":"✅ Translations and pricing added to all 4 days","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.802Z"}
+{"level":"info","message":"✅ Realtime itinerary saved to database successfully","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.937Z"}
+{"level":"info","message":"✅ Real-time itinerary generated successfully for Delhi","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.937Z"}
+{"level":"info","message":"Places persistence complete: 97 processed, 0 failed","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:47.220Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:07.491Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.448Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.932Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.948Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.949Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.950Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.952Z"}

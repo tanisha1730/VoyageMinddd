@@ -6,6 +6,10 @@ WORKDIR /app
 # Switch to root to fix permissions if needed
 USER root
 
+# Skip the redundant Chromium download during npm install
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
+
 # Install dependencies
 COPY --chown=pptruser:pptruser package*.json ./
 RUN npm ci --only=production

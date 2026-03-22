@@ -1,5 +1,5 @@
 const express = require('express');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const Joi = require('joi');
 const Itinerary = require('../models/Itinerary');
 const { authenticateToken } = require('../middleware/auth');
@@ -67,10 +67,11 @@ router.post('/pdf', authenticateToken, validateRequest(exportSchema), async (req
     // Generate HTML content
     const htmlContent = generateItineraryHTML(itinerary, req.user, include_map);
 
-    // Generate PDF using Puppeteer
+    // Generate PDF using Puppeteer Core and system-installed Chromium
     const browser = await puppeteer.launch({
       headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome-stable',
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
     });
 
     const page = await browser.newPage();

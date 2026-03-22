@@ -1191,3 +1191,13 @@
 {"level":"error","message":"Failed to upsert place T&M:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.003Z"}
 {"level":"error","message":"Failed to upsert place Yayoiken:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.015Z"}
 {"level":"error","message":"Failed to upsert place Soba Koshuya:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T14:06:02.026Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:22.819Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.910Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:25:58.910Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.934Z"}
+{"level":"error","message":"❌ No REAL places found for Bangkok","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:14.943Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:26:31.143Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.543Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.544Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.567Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.685Z"}
