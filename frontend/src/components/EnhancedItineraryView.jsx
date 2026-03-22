@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, DollarSign, MapPin } from 'lucide-react';
+import { Clock, DollarSign, MapPin, Star } from 'lucide-react';
 import { formatEntryFee } from '../utils/currencyUtils';
 
 const EnhancedItineraryView = ( { currentDayPlan, itinerary } ) =>
@@ -10,7 +10,7 @@ const EnhancedItineraryView = ( { currentDayPlan, itinerary } ) =>
     <div className="space-y-4">
       { currentDayPlan.places?.map( ( place, index ) => (
         <div
-          key={ place.place_id }
+          key={ place.place_id || index }
           className={ `rounded-xl shadow-sm border p-5 hover:shadow-md transition-shadow ${ place.activity_type === 'travel'
               ? 'bg-blue-50 border-blue-300 border-l-4'
               : 'bg-white border-gray-200'
