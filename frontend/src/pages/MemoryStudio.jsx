@@ -342,8 +342,8 @@ Make it warm, cinematic, nostalgic, and sensory (smell, sound, weather, colors, 
 
   const filteredMemories = memories.filter( memory =>
   {
-    const matchesSearch = memory.title.toLowerCase().includes( searchQuery.toLowerCase() ) ||
-      memory.note?.toLowerCase().includes( searchQuery.toLowerCase() )
+    const matchesSearch = ( memory.title?.toLowerCase().includes( searchQuery.toLowerCase() ) ||
+      memory.note?.toLowerCase().includes( searchQuery.toLowerCase() ) )
     const matchesFilter = activeFilter === 'All' ||
       memory.tags?.includes( activeFilter.toLowerCase() ) ||
       ( activeFilter === 'Recent' && new Date( memory.created_on ) > new Date( Date.now() - 30 * 24 * 60 * 60 * 1000 ) )
