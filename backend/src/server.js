@@ -45,10 +45,25 @@ app.use( helmet( {
 
 // Configure Cross-Origin Resource Sharing (CORS)
 app.use( cors( {
-  // strictly limit origins in production, allow local dev ports otherwise
-  origin: process.env.NODE_ENV === 'production'
-    ? [ 'https://yourdomain.com' ] // Production domain
-    : [ 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002', 'http://localhost:3003', 'http://localhost:5173' ], // Dev ports
+  // Allow the production Vercel URL, local dev ports, and an optional FRONTEND_URL env var
+  origin: ( origin, callback ) => {
+    const allowedOrigins = [
+      'https://voyage-mind-frontend.vercel.app', 
+      'http://localhost:3000', 
+      'http://localhost:3001', 
+      'http://localhost:3002', 
+      'http://localhost:3003', 
+      'http://localhost:5173'
+    ];
+    if ( process.env.FRONTEND_URL ) allowedOrigins.push( process.env.FRONTEND_URL );
+    
+    // Allow requests with no origin (like mobile apps or curl) or if origin is in allowedOrigins
+    if ( !origin || allowedOrigins.some( o => origin.startsWith( o ) ) ) {
+      callback( null, true );
+    } else {
+      callback( new Error( 'Not allowed by CORS' ) );
+    }
+  },
   // Allow cookies/headers to be sent across origins
   credentials: true
 } ) );
