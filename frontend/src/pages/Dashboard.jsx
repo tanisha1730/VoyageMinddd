@@ -104,6 +104,15 @@ const Dashboard = () =>
     }
   }
 
+  const getImageUrl = ( url ) =>
+  {
+    if ( !url ) return '';
+    if ( url.startsWith( 'http' ) ) return url;
+    // Use the base URL from the API config
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+    return `${ API_BASE_URL }${ url }`;
+  }
+
   if ( loading )
   {
     return (
@@ -277,7 +286,7 @@ const Dashboard = () =>
                   <div key={ memory._id } className="relative group">
                     <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
                       <img
-                        src={ memory.image_url }
+                        src={ getImageUrl( memory.image_url ) }
                         alt={ memory.title }
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                       />
