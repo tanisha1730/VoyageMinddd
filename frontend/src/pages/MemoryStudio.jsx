@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { memoriesAPI, mlAPI, handleAPIError } from '../services/api'
+import { memoriesAPI, mlAPI, handleAPIError, API_BASE_URL } from '../services/api'
 import { Camera, Upload, Plus, Trash2, Download, Search, Share2, Edit, MapPin, Calendar } from 'lucide-react'
 import LoadingSpinner from '../components/LoadingSpinner'
 import toast from 'react-hot-toast'
