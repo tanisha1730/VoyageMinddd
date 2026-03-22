@@ -159,11 +159,11 @@ router.post( '/', authenticateToken, upload.single( 'image' ), async ( req, res,
     {
       if ( value.location && value.weather )
       {
-        const captionResult = await mlService.generatePostcardCaption( {
-          poi: value.location,
-          date: new Date().toISOString().split( 'T' )[ 0 ],
-          weather: value.weather
-        } );
+        const captionResult = await mlService.generateCaption(
+          value.location,
+          new Date().toISOString().split( 'T' )[ 0 ],
+          value.weather
+        );
         caption = captionResult.caption;
       }
     } catch ( error )
