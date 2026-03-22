@@ -249,7 +249,7 @@ Make it warm, cinematic, nostalgic, and sensory (smell, sound, weather, colors, 
   {
     if ( !url ) return '';
     if ( url.startsWith( 'http' ) ) return url;
-    return `http://localhost:3001${ url }`;
+    return `${ API_BASE_URL }${ url }`;
   }
 
   const handleDelete = async ( id ) =>

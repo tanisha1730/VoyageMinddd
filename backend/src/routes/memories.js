@@ -149,8 +149,9 @@ router.post( '/', authenticateToken, upload.single( 'image' ), async ( req, res,
       } );
     }
 
-    const baseUrl = `${ req.protocol }://${ req.get( 'host' ) }`;
-    const imageUrl = `${ baseUrl }/uploads/memories/${ req.file.filename }`;
+    // Calculate base URL dynamically
+    const baseUrl = process.env.BACKEND_URL || `${ req.protocol }://${ req.get( 'host' ) }`;
+    const imageUrl = `/uploads/memories/${ req.file.filename }`;
 
     // Generate caption using ML service
     let caption = '';

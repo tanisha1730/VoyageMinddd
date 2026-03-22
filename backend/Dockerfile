@@ -17,8 +17,8 @@ RUN npm ci --only=production
 # Copy source code
 COPY --chown=pptruser:pptruser src/ ./src/
 
-# Create uploads directory and set permissions
-RUN mkdir -p uploads && chown -R pptruser:pptruser /app
+# Create uploads and sub-directories and set permissions
+RUN mkdir -p uploads/memories && chown -R pptruser:pptruser /app
 
 # Switch back to the non-root user for security
 USER pptruser
