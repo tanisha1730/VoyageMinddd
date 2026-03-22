@@ -16640,3 +16640,127 @@
 {"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.949Z"}
 {"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.950Z"}
 {"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T05:23:08.952Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:32.459Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.173Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.693Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.708Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.709Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.711Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:07:33.712Z"}
+{"level":"info","message":"User logged in: tannie@gmail.com","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:08:58.634Z"}
+{"level":"info","message":"🚀 Real-time itinerary generation started for: Plan a trip to London for 2 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.507Z"}
+{"level":"info","message":"🧠 Parsing NLP query: Plan a trip to London for 2 days with budget 50000 interested in everything","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.509Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.559Z"}
+{"budget":50000,"confidence":{"budget":0.9,"days":0.9,"destination":0.8},"days":2,"destination":"London","interests":["budget"],"level":"info","message":"🧠 Parsed query:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.566Z"}
+{"level":"info","message":"💰 Budget in local currency (GBP): 50000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.569Z"}
+{"level":"info","message":"🌍 Fetching real places from Google Places API for London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.572Z"}
+{"level":"info","message":"🌍 FREE API: Getting places for London...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.585Z"}
+{"level":"info","message":"📍 Geocoding London using Nominatim (FREE)...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.587Z"}
+{"level":"info","message":"✅ Coordinates: 51.5074456, -0.1277653","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:13.145Z"}
+{"level":"info","message":"⚠️ OpenTripMap disabled - using Overpass API instead","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:13.148Z"}
+{"level":"info","message":"🗺️ Fetching from Overpass API (FREE, no key needed)...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:13.150Z"}
+{"level":"info","message":"✅ Got 100 places from Overpass API (English names only)","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:34.749Z"}
+{"level":"info","message":"✅ Total unique places: 100","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:34.752Z"}
+{"level":"info","message":"🌍 Fetching MANY REAL places from Wikidata for: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:34.760Z"}
+{"level":"info","message":"✅ Found destination: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:35.346Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.359Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.361Z"}
+{"level":"info","message":"✅ Found 0 REAL places from Wikidata","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.362Z"}
+{"level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.363Z"}
+{"level":"info","message":"🌍 Fetching real places from OpenStreetMap for: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.370Z"}
+{"level":"info","message":"🔍 Geocoding location: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.372Z"}
+{"level":"info","message":"📡 Geocoding response status: 200","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.454Z"}
+{"level":"info","message":"📊 Geocoding results count: 1","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.455Z"}
+{"level":"info","message":"✅ Location found: Greater London, England, United Kingdom","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.455Z"}
+{"level":"info","message":"📍 Location found: Greater London, England, United Kingdom","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.456Z"}
+{"level":"info","message":"⏳ Waiting 915ms to respect OpenStreetMap rate limit...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.457Z"}
+{"level":"info","message":"🗺️ Fetching places from OpenStreetMap near 51.5074456,-0.1277653","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:06.379Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.695Z"}
+{"level":"info","message":"✅ Returning 0 real places from OpenStreetMap","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.696Z"}
+{"level":"info","message":"✅ Found 89 real places from Google API","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.705Z"}
+{"level":"info","message":"📋 Initial real places: 89","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.706Z"}
+{"level":"info","message":"✅ Using 89 REAL places only","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.707Z"}
+{"0":"The Polish Bar (Na Zdrowie)","1":"All Bar One","2":"The Saint","3":"Woburn Cafe","4":"Cafe Angel","level":"info","message":"📝 Sample places:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.708Z"}
+{"level":"info","message":"🎯 Getting PERSONALIZED recommendations from REAL places...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.710Z"}
+{"level":"info","message":"🔍 Analyzing travel profile for user: 69bc1fc4fb93c6dc259fb873","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.711Z"}
+{"level":"info","message":"✅ User profile analyzed: 15 trips, top interests: name, logistics, amenity","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.865Z"}
+{"level":"info","message":"✨ Personalized 89 places based on your travel history","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.869Z"}
+{"level":"info","message":"🎯 Getting recommendations for London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.872Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.908Z"}
+{"level":"info","message":"🎯 Generated 89 ML recommendations with personalization","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.910Z"}
+{"level":"info","message":"🗓️ Planning 7 places per day for 2 days (total: 14)","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.911Z"}
+{"level":"info","message":"📊 Available recommendations: 89","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.911Z"}
+{"level":"info","message":"🎯 Final unique recommendations: 14","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.912Z"}
+{"level":"info","message":"⚡ Creating SUPER INTELLIGENT itinerary with 7 places per day (currency: GBP)...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.914Z"}
+{"level":"info","message":"🎯 Building 2-day itinerary for London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.921Z"}
+{"level":"info","message":"📦 Received 89 total places","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.923Z"}
+{"level":"info","message":"📦 Using 89 places for itinerary building","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.924Z"}
+{"level":"info","message":"📊 Categorized: 7 attractions, 81 restaurants, 1 nature, 0 shopping, 0 viewpoints","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.927Z"}
+{"level":"info","message":"📊 Available places: 8 activities, 78 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.931Z"}
+{"level":"info","message":"🎯 Need: 8 activities, 6 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.932Z"}
+{"level":"info","message":"✅ Have: 8 activities, 78 restaurants","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.933Z"}
+{"level":"info","message":"📝 Sample activities: The Gurkha Soldier, Alan Brooke, 1st Viscount Alanbrooke, Monty, London Bridge Experience, The Type Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.933Z"}
+{"level":"info","message":"📝 Sample restaurants: The Polish Bar (Na Zdrowie), All Bar One, The Saint, Woburn Cafe, Cafe Angel","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.934Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Strada","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.940Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.942Z"}
+{"level":"info","message":"✅ Final: \"Strada\" → \"Strada, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.942Z"}
+{"level":"info","message":"✅ Selected NEW activity: Little Ben","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.970Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.972Z"}
+{"level":"info","message":"✅ Final: \"Little Ben\" → \"Little Ben, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.973Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Icebar","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.974Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.975Z"}
+{"level":"info","message":"✅ Final: \"Icebar\" → \"Icebar, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.976Z"}
+{"level":"info","message":"✅ Selected NEW activity: London Bridge Experience","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.977Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.978Z"}
+{"level":"info","message":"⚠️ Skipped (already in name): \"London Bridge Experience\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.980Z"}
+{"level":"info","message":"✅ Selected NEW activity: Alan Brooke, 1st Viscount Alanbrooke","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.981Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.982Z"}
+{"level":"info","message":"✅ Final: \"Alan Brooke, 1st Viscount Alanbrooke\" → \"Alan Brooke, 1st Viscount Alanbrooke, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.983Z"}
+{"level":"info","message":"✅ Selected NEW activity: Jacob","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.984Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.986Z"}
+{"level":"info","message":"✅ Final: \"Jacob\" → \"Jacob, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.986Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Tower Tandoori","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.987Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.988Z"}
+{"level":"info","message":"✅ Final: \"Tower Tandoori\" → \"Tower Tandoori, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.988Z"}
+{"level":"info","message":"✅ Day 1: 8 places, Strada, London, Little Ben, London, Icebar, London, London Bridge Experience, Alan Brooke, 1st Viscount Alanbrooke, London, Jacob, London, Tower Tandoori, London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.990Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: City Brunch","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.992Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.993Z"}
+{"level":"info","message":"✅ Final: \"City Brunch\" → \"City Brunch, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.994Z"}
+{"level":"info","message":"✅ Selected NEW activity: Monty","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.996Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.997Z"}
+{"level":"info","message":"✅ Final: \"Monty\" → \"Monty, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.998Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Goodman","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.998Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.999Z"}
+{"level":"info","message":"✅ Final: \"Goodman\" → \"Goodman, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.000Z"}
+{"level":"info","message":"✅ Selected NEW activity: The Gurkha Soldier","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.001Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.003Z"}
+{"level":"info","message":"✅ Final: \"The Gurkha Soldier\" → \"The Gurkha Soldier, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.004Z"}
+{"level":"info","message":"✅ Selected NEW activity: The Type Museum","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.005Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.006Z"}
+{"level":"info","message":"✅ Final: \"The Type Museum\" → \"The Type Museum, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.007Z"}
+{"level":"info","message":"✅ Selected NEW activity: The Cockpit","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.008Z"}
+{"level":"info","message":"✅ Using default city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.009Z"}
+{"level":"info","message":"✅ Final: \"The Cockpit\" → \"The Cockpit, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.010Z"}
+{"level":"info","message":"✅ Selected NEW restaurant: Tank & Paddle","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.011Z"}
+{"level":"info","message":"✅ Using place.city: London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.012Z"}
+{"level":"info","message":"✅ Final: \"Tank & Paddle\" → \"Tank & Paddle, London\"","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.013Z"}
+{"level":"info","message":"✅ Day 2: 9 places, City Brunch, London, Monty, London, Goodman, London, The Gurkha Soldier, London, The Type Museum, London, 🚇 Metro to The Cockpit, The Cockpit, London, Tank & Paddle, London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.014Z"}
+{"level":"info","message":"✅ Generated INTELLIGENT plan with 2 days","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.015Z"}
+{"level":"info","message":"🎯 USING INTELLIGENT BUILDER OUTPUT DIRECTLY!","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.016Z"}
+{"level":"info","message":"✅ Using intelligent builder plan with 2 days (requested: 2)","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.017Z"}
+{"level":"info","message":"🎯 Intelligent builder guaranteed 2 days!","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.018Z"}
+{"level":"info","message":"🌤️ Getting weather forecast...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.019Z"}
+{"level":"info","message":"✅ Using intelligent builder's plan directly - no enhancement needed!","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.022Z"}
+{"level":"info","message":"🌍 Adding translations and multi-currency pricing...","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.023Z"}
+{"entry_fee":20,"level":"info","message":"📝 Sample place after processing:","name":"Strada","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.040Z"}
+{"level":"info","message":"✅ Translations and pricing added to all 2 days","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.051Z"}
+{"level":"info","message":"✅ Realtime itinerary saved to database successfully","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.196Z"}
+{"level":"info","message":"✅ Real-time itinerary generated successfully for London","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:13.197Z"}
+{"level":"info","message":"Places persistence complete: 89 processed, 0 failed","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:14.538Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:31.733Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:32.052Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:33.175Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:33.187Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:33.188Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:33.189Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:20:33.190Z"}

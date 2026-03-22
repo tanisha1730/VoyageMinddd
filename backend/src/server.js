@@ -64,9 +64,16 @@ app.use( cors( {
       callback( new Error( 'Not allowed by CORS' ) );
     }
   },
+  // Explicitly allow methods used by the application
+  methods: [ 'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS' ],
+  // Allow headers that are commonly used
+  allowedHeaders: [ 'Content-Type', 'Authorization', 'X-Requested-With', 'Accept' ],
   // Allow cookies/headers to be sent across origins
   credentials: true
 } ) );
+
+// Enable pre-flight across-the-board for all routes
+app.options( '*', cors() );
 
 // --- Rate Limiting Configuration ---
 

@@ -1201,3 +1201,8 @@
 {"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:29.544Z"}
 {"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.567Z"}
 {"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-21T19:27:45.685Z"}
+{"level":"error","message":"❌ NLP parsing failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:09:12.559Z"}
+{"level":"error","message":"SPARQL query error:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.359Z"}
+{"level":"error","message":"Error details:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:05.361Z"}
+{"level":"error","message":"OpenStreetMap places fetch error:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.695Z"}
+{"level":"error","message":"❌ Recommendation failed:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T06:10:12.908Z"}
