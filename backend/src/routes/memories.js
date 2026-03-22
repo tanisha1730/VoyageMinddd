@@ -153,14 +153,29 @@ router.post( '/', authenticateToken, upload.single( 'image' ), async ( req, res,
     const baseUrl = process.env.BACKEND_URL || `${ req.protocol }://${ req.get( 'host' ) }`;
     const imageUrl = `/uploads/memories/${ req.file.filename }`;
 
+    // Robust handling for JSON strings in multipart form data
+    const safeParse = ( val ) =>
+    {
+      if ( !val ) return val;
+      if ( typeof val !== 'string' ) return val;
+      if ( ( val.startsWith( '{' ) && val.endsWith( '}' ) ) || ( val.startsWith( '[' ) && val.endsWith( ']' ) ) )
+      {
+        try { return JSON.parse( val ); } catch ( e ) { return val; }
+      }
+      return val;
+    };
+
+    const parsedLocation = safeParse( value.location );
+    const locationName = typeof parsedLocation === 'object' ? parsedLocation.name : parsedLocation;
+
     // Generate caption using ML service
     let caption = '';
     try
     {
-      if ( value.location && value.weather )
+      if ( locationName && value.weather )
       {
         const captionResult = await mlService.generateCaption(
-          value.location,
+          locationName,
           new Date().toISOString().split( 'T' )[ 0 ],
           value.weather
         );
@@ -179,8 +194,8 @@ router.post( '/', authenticateToken, upload.single( 'image' ), async ( req, res,
       image_url: imageUrl,
       note: value.note,
       caption,
-      location: value.location,
-      tags: value.tags ? value.tags.split( ',' ).map( t => t.trim() ) : [],
+      location: locationName,
+      tags: Array.isArray( safeParse( value.tags ) ) ? safeParse( value.tags ) : ( value.tags ? value.tags.split( ',' ).map( t => t.trim() ) : [] ),
       weather: value.weather,
       layout: value.layout || 'Magazine',
       is_public: value.is_public,
