@@ -16771,3 +16771,17 @@
 {"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:08:10.540Z"}
 {"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:08:10.541Z"}
 {"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:08:10.541Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.002Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.234Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.535Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.544Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.545Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.545Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:29:38.546Z"}
+{"level":"warn","message":"⚠️ Amadeus credentials missing. Using mock mode.","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:46.573Z"}
+{"level":"warn","message":"Redis connection failed, using in-memory cache:","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.126Z"}
+{"level":"info","message":"✅ Connected to MongoDB Atlas","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.453Z"}
+{"level":"info","message":"🚀 Server running on port 3001","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.460Z"}
+{"level":"info","message":"📊 Database: Connected","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.461Z"}
+{"level":"info","message":"🌐 Frontend: http://localhost:3000","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.461Z"}
+{"level":"info","message":"📖 API Docs: http://localhost:3001/api-docs","service":"ai-travel-planner-backend","timestamp":"2026-03-22T07:44:47.462Z"}

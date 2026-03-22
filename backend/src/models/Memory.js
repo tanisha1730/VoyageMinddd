@@ -28,10 +28,8 @@ const memorySchema = new mongoose.Schema({
     trim: true
   },
   location: {
-    place_id: String,
-    name: String,
-    lat: Number,
-    lng: Number
+    type: String,
+    trim: true
   },
   tags: [{
     type: String,
